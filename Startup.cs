@@ -17,6 +17,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PsychoHelp_API.Domain.Repositories;
+using PsychoHelp_API.patients.Domain.Repositories;
+using PsychoHelp_API.patients.Domain.Services;
+using PsychoHelp_API.patients.Persistence.Repositories;
+using PsychoHelp_API.patients.Services;
 using PsychoHelp_API.Persistence.Contexts;
 using PsychoHelp_API.Persistence.Repositories;
 
@@ -34,7 +38,6 @@ namespace PsychoHelp_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options =>
             {
@@ -42,6 +45,10 @@ namespace PsychoHelp_API
             });
             services.AddScoped<IPsychologistRepository, PsychologistRepository >();
             services.AddScoped<IPsychologistService, PsychologistService>();
+            services.AddScoped<ILogBookRepository, LogBookRepository>();
+            services.AddScoped<ILogBookService, LogbookService>();
+            services.AddScoped<IPatientRepository, PatientRepository>();
+            services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
@@ -50,7 +57,6 @@ namespace PsychoHelp_API
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

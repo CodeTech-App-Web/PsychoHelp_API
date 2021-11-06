@@ -11,11 +11,10 @@ namespace PsychoHelp_API.Persistence.Repositories
         {
             _context = context;
         }
-
-
         public async Task CompleteAsync()
         {
             _context.SaveChangesAsync();
         }
     }
 }
+

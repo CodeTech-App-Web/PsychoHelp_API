@@ -12,6 +12,6 @@ namespace PsychoHelp_API.Extensions
                 .SelectMany(m => m.Value.Errors)
                 .Select(m => m.ErrorMessage)
                 .ToList();
-        }
+        }   
     }
 }

@@ -1,22 +1,26 @@
-﻿namespace PsychoHelp_API.Domain.Services.Communication
+﻿using System.Threading.Tasks;
+
+namespace PsychoHelp_API.Domain.Services.Communication
 {
     public abstract class BaseResponse<T>
     {
-        public bool Success { get; protected set; }
-        public string Message { get; protected set; }
+        
+        public bool Success { get; private set; }
+        public string Message { get; private set; }
+        
         public T Resource { get; private set; }
-        protected BaseResponse( string message)
+
+        protected BaseResponse(string message)
         {
             Success = false;
             Message = message;
         }
-
-        protected BaseResponse(T resource)
+        
+        protected BaseResponse(T resource) 
         {
             Success = true;
             Resource = resource;
         }
-
-
     }
 }
+

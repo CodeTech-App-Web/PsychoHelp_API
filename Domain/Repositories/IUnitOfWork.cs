@@ -7,3 +7,4 @@ namespace PsychoHelp_API.Domain.Repositories
         Task CompleteAsync();
     }
 }
+
