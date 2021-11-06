@@ -2,15 +2,23 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PsychoHelp_API.Psychologists.Domain.Repositories;
+using PsychoHelp_API.Psychologists.Domain.Services;
+using PsychoHelp_API.Psychologists.Persistence.Repositories;
+using PsychoHelp_API.Psychologists.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PsychoHelp_API.Domain.Repositories;
+using PsychoHelp_API.Persistence.Contexts;
+using PsychoHelp_API.Persistence.Repositories;
 
 namespace PsychoHelp_API
 {
@@ -28,6 +36,14 @@ namespace PsychoHelp_API
         {
 
             services.AddControllers();
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseInMemoryDatabase("psychohelp-api-in-memory");
+            });
+            services.AddScoped<IPsychologistRepository, PsychologistRepository >();
+            services.AddScoped<IPsychologistService, PsychologistService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PsychoHelp_API", Version = "v1" });
