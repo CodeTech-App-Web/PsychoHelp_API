@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.idea",
+    "\\.idea\\.idea.PsychoHelp_API",
+    "\\.idea\\.idea.PsychoHelp_API\\.idea",
+    "\\bin",
+    "\\bin\\Debug",
+    "\\bin\\Debug\\net5.0",
+    "\\bin\\Release",
+    "\\bin\\Release\\net5.0",
+    "\\bin\\Release\\net5.0\\ref",
+    "\\patients",
+    "\\patients\\Controllers"
+  ],
+  "SelectedNode": "\\patients\\Controllers\\LogbooksController.cs",
+  "PreviewInSolutionExplorer": false
+}

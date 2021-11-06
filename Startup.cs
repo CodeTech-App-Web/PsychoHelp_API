@@ -11,6 +11,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using PsychoHelp_API.patients.Domain.Repositories;
+using PsychoHelp_API.patients.Domain.Services;
+using PsychoHelp_API.patients.Persistence.Contexts;
+using PsychoHelp_API.patients.Persistence.Repositories;
+using PsychoHelp_API.patients.Services;
 
 namespace PsychoHelp_API
 {
@@ -26,8 +32,24 @@ namespace PsychoHelp_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseMySQL(
+                    Configuration.GetConnectionString("ConexionPsychoHelp"));
+            });
+            /*{
+                //options.UseInMemoryDatabase("psychohelp-api-in-memory");
+            });*/
+            services.AddScoped<ILogBookRepository, LogBookRepository>();
+            services.AddScoped<ILogBookService, LogbookService>();
+
+            services.AddScoped<IPatientRepository, PatientRepository>();
+            services.AddScoped<IPatientService, PatientService>();
+
+            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PsychoHelp_API", Version = "v1" });
