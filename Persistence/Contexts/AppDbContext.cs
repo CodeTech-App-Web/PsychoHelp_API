@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using PsychoHelp_API.Extensions;
 using PsychoHelp_API.Psychologists.Domain.Model;
 using PsychoHelp_API.patients.Domain.Models;
+using PsychoHelp_API.Publications.Domain.Models;
 
 namespace PsychoHelp_API.Persistence.Contexts
 {
@@ -14,6 +16,7 @@ namespace PsychoHelp_API.Persistence.Contexts
         public DbSet<Psychologist_Schedule> Psychologist_Schedules { get; set; }
         public DbSet<Logbook> Logbooks { get; set; }
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<Publication> Publications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -142,6 +145,25 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Patient>().Property(p => p.Date).IsRequired();
             builder.Entity<Patient>().Property(p => p.Img);
 
+            //Publication
+
+            //Constrains
+            builder.Entity<Publication>().ToTable("Publications");
+            builder.Entity<Publication>().HasKey(p => p.Id);
+            builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Publication>().Property(p => p.Title).IsRequired().HasMaxLength(100);
+            builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(1000);
+            builder.Entity<Publication>().Property(p => p.Tags).IsRequired().HasMaxLength(50);
+            builder.Entity<Publication>().Property(p => p.CreatedAt).HasColumnType("DateTime");
+
+            //Sample Data
+            builder.Entity<Publication>().HasData
+            (
+                new Publication { Id = 100, Title = "Prueba 1", Description = "Descripcion de Prueba", Tags = "Tag Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") },
+                new Publication { Id = 101, Title = "Prueba 2", Description = "Descripcion de Prueba", Tags = "Tag Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") }
+            );
+
+            
             
             // Apply Snake Case Naming Convention to All Objects
             builder.UseSnakeCaseNamingConvention();
