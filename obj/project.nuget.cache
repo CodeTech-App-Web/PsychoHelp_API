@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qovD8v1dY633VktkN5uj+2Pxh1PAoJM5Vg90lPJJPIu0FAkag2ChZb9NpfMDujj5dHiKdLKO6xCp/nOi2ixXHg==",
+  "dgSpecHash": "+HNMrxNCbwJf2kPjUmED/FXO9xJADX7CfF6SNl9K32jFOBEOLXBvHX1NMN6x3DvRRlIxalSdpYoftKBWq/FzuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TARAZONA\\Desktop\\.NET\\PsychoHelp_API\\PsychoHelp_API.csproj",
+  "projectFilePath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TARAZONA\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\TARAZONA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

@@ -1070,21 +1070,21 @@
   "packageFolders": {
     "C:\\Users\\TARAZONA\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TARAZONA\\Desktop\\.NET\\PsychoHelp_API\\PsychoHelp_API.csproj",
+      "projectUniqueName": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
       "projectName": "PsychoHelp_API",
-      "projectPath": "C:\\Users\\TARAZONA\\Desktop\\.NET\\PsychoHelp_API\\PsychoHelp_API.csproj",
+      "projectPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
       "packagesPath": "C:\\Users\\TARAZONA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TARAZONA\\Desktop\\.NET\\PsychoHelp_API\\obj\\",
+      "outputPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
