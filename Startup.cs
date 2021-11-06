@@ -12,11 +12,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using PsychoHelp_API.Domain.Repositories;
 using PsychoHelp_API.patients.Domain.Repositories;
 using PsychoHelp_API.patients.Domain.Services;
-using PsychoHelp_API.patients.Persistence.Contexts;
 using PsychoHelp_API.patients.Persistence.Repositories;
 using PsychoHelp_API.patients.Services;
+using PsychoHelp_API.Persistence.Contexts;
+using PsychoHelp_API.Persistence.Repositories;
 
 namespace PsychoHelp_API
 {
