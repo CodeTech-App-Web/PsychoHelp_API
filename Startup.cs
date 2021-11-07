@@ -23,6 +23,10 @@ using PsychoHelp_API.patients.Persistence.Repositories;
 using PsychoHelp_API.patients.Services;
 using PsychoHelp_API.Persistence.Contexts;
 using PsychoHelp_API.Persistence.Repositories;
+using PsychoHelp_API.Publications.Domain.Repositories;
+using PsychoHelp_API.Publications.Domain.Services;
+using PsychoHelp_API.Publications.Persistence.Repositories;
+using PsychoHelp_API.Publications.Services;
 
 namespace PsychoHelp_API
 {
@@ -45,11 +49,18 @@ namespace PsychoHelp_API
             });
             services.AddScoped<IPsychologistRepository, PsychologistRepository >();
             services.AddScoped<IPsychologistService, PsychologistService>();
+            
             services.AddScoped<ILogBookRepository, LogBookRepository>();
             services.AddScoped<ILogBookService, LogbookService>();
+            
             services.AddScoped<IPatientRepository, PatientRepository>();
             services.AddScoped<IPatientService, PatientService>();
+            
+            services.AddScoped<IPublicationRepository, PublicationRepository>();
+            services.AddScoped<IPublicationService, PublicationService>();
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
             {

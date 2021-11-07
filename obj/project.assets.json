@@ -1969,30 +1969,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TARAZONA\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
+      "projectUniqueName": "D:\\GitHub Projects\\PsychoHelp_API\\PsychoHelp_API.csproj",
       "projectName": "PsychoHelp_API",
-      "projectPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
-      "packagesPath": "C:\\Users\\TARAZONA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\obj\\",
+      "projectPath": "D:\\GitHub Projects\\PsychoHelp_API\\PsychoHelp_API.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub Projects\\PsychoHelp_API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\TARAZONA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -2076,7 +2066,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
