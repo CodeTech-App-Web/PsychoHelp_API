@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub Projects\\PsychoHelp_API\\PsychoHelp_API.csproj": {}
+    "D:\\Trabajos de la U\\GitHubRepositoryTrabajos\\TRABAJO_FINAL_WEB\\PsychoHelp_API\\PsychoHelp_API.csproj": {}
   },
   "projects": {
-    "D:\\GitHub Projects\\PsychoHelp_API\\PsychoHelp_API.csproj": {
+    "D:\\Trabajos de la U\\GitHubRepositoryTrabajos\\TRABAJO_FINAL_WEB\\PsychoHelp_API\\PsychoHelp_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub Projects\\PsychoHelp_API\\PsychoHelp_API.csproj",
+        "projectUniqueName": "D:\\Trabajos de la U\\GitHubRepositoryTrabajos\\TRABAJO_FINAL_WEB\\PsychoHelp_API\\PsychoHelp_API.csproj",
         "projectName": "PsychoHelp_API",
-        "projectPath": "D:\\GitHub Projects\\PsychoHelp_API\\PsychoHelp_API.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub Projects\\PsychoHelp_API\\obj\\",
+        "projectPath": "D:\\Trabajos de la U\\GitHubRepositoryTrabajos\\TRABAJO_FINAL_WEB\\PsychoHelp_API\\PsychoHelp_API.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Trabajos de la U\\GitHubRepositoryTrabajos\\TRABAJO_FINAL_WEB\\PsychoHelp_API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,6 +82,10 @@
               "version": "[5.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
               "version": "[6.2.3, )"
             }

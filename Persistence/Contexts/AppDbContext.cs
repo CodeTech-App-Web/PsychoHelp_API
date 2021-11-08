@@ -4,6 +4,7 @@ using PsychoHelp_API.Extensions;
 using PsychoHelp_API.Psychologists.Domain.Model;
 using PsychoHelp_API.patients.Domain.Models;
 using PsychoHelp_API.Publications.Domain.Models;
+using PsychoHelp_API.Appointments.Domain.Models;
 
 namespace PsychoHelp_API.Persistence.Contexts
 {
@@ -17,6 +18,7 @@ namespace PsychoHelp_API.Persistence.Contexts
         public DbSet<Logbook> Logbooks { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Publication> Publications { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -163,7 +165,33 @@ namespace PsychoHelp_API.Persistence.Contexts
                 new Publication { Id = 101, Title = "Prueba 2", Description = "Descripcion de Prueba", Tags = "Tag Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") }
             );
 
+            //Appointment 
             
+            //Constrains
+            builder.Entity<Appointment>().ToTable("Appointments");
+            builder.Entity<Appointment>().HasKey(p => p.Id);
+            builder.Entity<Appointment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Appointment>().Property(p => p.PsychoNotes).IsRequired().HasMaxLength(100);
+            builder.Entity<Appointment>().Property(p => p.ScheduleDate).HasColumnType("ScheduleDate");
+            builder.Entity<Appointment>().Property(p => p.CreatedAt).HasColumnType("DateTime");
+            
+            //Relationships
+            builder.Entity<Appointment>()
+                .HasOne(p => p.psychologist)
+                .WithMany(pp => pp.Appointments)
+                .HasForeignKey(pi => pi.PsychoId);
+            
+            builder.Entity<Appointment>()
+                .HasOne(p => p.patient)
+                .WithMany(pp => pp.Appointments)
+                .HasForeignKey(pi => pi.PatientId);
+            
+            //Sample Data
+            builder.Entity<Appointment>().HasData
+            (
+                new Appointment { Id = 8, PsychoNotes = "Esta es una prueba del psicologo", ScheduleDate = DateTime.Parse("2021-11-03T10:00:20.450Z"), CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") },
+                new Appointment { Id = 18, PsychoNotes = "Esta es la segunda prueba del psicologo", ScheduleDate = DateTime.Parse("2021-11-02T16:40:00.450Z"), CreatedAt = DateTime.Parse("2021-11-02T07:49:54.450Z") }
+            );
             
             // Apply Snake Case Naming Convention to All Objects
             builder.UseSnakeCaseNamingConvention();

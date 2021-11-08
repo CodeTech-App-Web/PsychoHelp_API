@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using PsychoHelp_API.Appointments.Domain.Models;
 
 namespace PsychoHelp_API.patients.Domain.Models
 {
@@ -17,6 +19,7 @@ namespace PsychoHelp_API.patients.Domain.Models
         // Relationships
         public int LogBookId { get; set; }
         public Logbook Logbook { get; set; }
+        public IList<Appointment> Appointments { get; set; }= new List<Appointment>();
 
         public void SetLogBook(Logbook logbook)
         {
