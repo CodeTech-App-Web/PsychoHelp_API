@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using PsychoHelp_API.Appointments.Domain.Models;
 
 namespace PsychoHelp_API.Psychologists.Domain.Model
 {
@@ -25,6 +26,6 @@ namespace PsychoHelp_API.Psychologists.Domain.Model
 
         //RelationShips
         public IList<Psychologist_Schedule> Psychologist_Schedules { get; set; } = new List<Psychologist_Schedule>();
-        
+        public IList<Appointment> Appointments { get; set; }= new List<Appointment>();
     }
 }

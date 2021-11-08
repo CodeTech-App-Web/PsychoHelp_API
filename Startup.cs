@@ -16,6 +16,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PsychoHelp_API.Appointments.Domain.Repositories;
+using PsychoHelp_API.Appointments.Domain.Services;
+using PsychoHelp_API.Appointments.Persistence.Repositories;
+using PsychoHelp_API.Appointments.Services;
 using PsychoHelp_API.Domain.Repositories;
 using PsychoHelp_API.patients.Domain.Repositories;
 using PsychoHelp_API.patients.Domain.Services;
@@ -59,11 +63,15 @@ namespace PsychoHelp_API
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IPublicationService, PublicationService>();
             
+            services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
             {
+                c.EnableAnnotations();
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PsychoHelp_API", Version = "v1" });
             });
         }
