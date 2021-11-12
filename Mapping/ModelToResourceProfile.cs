@@ -15,6 +15,7 @@ namespace PsychoHelp_API.Mapping
         public ModelToResourceProfile()
         {
             CreateMap<Psychologist, PsychologistResource>();
+            CreateMap<Schedule, ScheduleResource>();
             CreateMap<Patient, PatientResource>();
             CreateMap<Logbook, LogBookResource>();
             CreateMap<Publication, PublicationResource>();

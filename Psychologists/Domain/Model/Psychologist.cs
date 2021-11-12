@@ -23,9 +23,8 @@ namespace PsychoHelp_API.Psychologists.Domain.Model
         public int Cmp { get; set; }
         public EGenre Genre { get; set; }
         public ESessionType SessionType { get; set; }
-
-        //RelationShips
-        public IList<Psychologist_Schedule> Psychologist_Schedules { get; set; } = new List<Psychologist_Schedule>();
-        public IList<Appointment> Appointments { get; set; }= new List<Appointment>();
+        
+        //RelationShip
+        public virtual  ICollection<Schedule> Schedules { get; set; }
     }
 }

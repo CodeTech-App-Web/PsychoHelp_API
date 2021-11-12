@@ -53,6 +53,9 @@ namespace PsychoHelp_API
             });
             services.AddScoped<IPsychologistRepository, PsychologistRepository >();
             services.AddScoped<IPsychologistService, PsychologistService>();
+
+            services.AddScoped<IScheduleRepository, ScheduleRepository>();
+            services.AddScoped<IScheduleService, ScheduleService>();
             
             services.AddScoped<ILogBookRepository, LogBookRepository>();
             services.AddScoped<ILogBookService, LogbookService>();
