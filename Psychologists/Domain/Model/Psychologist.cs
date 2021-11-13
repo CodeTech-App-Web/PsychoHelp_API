@@ -26,5 +26,7 @@ namespace PsychoHelp_API.Psychologists.Domain.Model
         
         //RelationShip
         public virtual  ICollection<Schedule> Schedules { get; set; }
+
+        public IList<Appointment> Appointments { get; set; } = new List<Appointment>();
     }
 }
