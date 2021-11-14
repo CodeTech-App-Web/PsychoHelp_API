@@ -8,8 +8,8 @@ namespace PsychoHelp_API.Psychologists.Domain.Model
         //Propierties
         public int Id { get; set; }
         public string Time { get; set; }
-
-        //RelationShips
-        public IList<Psychologist_Schedule> Psychologist_Schedules { get; set; } = new List<Psychologist_Schedule>();
+        
+        //RelationShip
+        public virtual ICollection<Psychologist> Psychologists { get; set; }
     }
 }

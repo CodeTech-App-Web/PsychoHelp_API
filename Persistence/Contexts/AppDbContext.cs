@@ -14,7 +14,6 @@ namespace PsychoHelp_API.Persistence.Contexts
 
         public DbSet<Psychologist> Psychologists { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
-        public DbSet<Psychologist_Schedule> Psychologist_Schedules { get; set; }
         public DbSet<Logbook> Logbooks { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Publication> Publications { get; set; }
@@ -26,16 +25,7 @@ namespace PsychoHelp_API.Persistence.Contexts
             base.OnModelCreating(builder);
 
             //Psychologist_Schedules
-            //Builder
-            builder.Entity<Psychologist_Schedule>()
-                .HasOne(p => p.Psychologist)
-                .WithMany(pp => pp.Psychologist_Schedules)
-                .HasForeignKey(pi => pi.PsychologistId);
             
-            builder.Entity<Psychologist_Schedule>()
-                .HasOne(p => p.Schedule)
-                .WithMany(pp => pp.Psychologist_Schedules)
-                .HasForeignKey(pi => pi.ScheduleId);
 
             //Psychologist
 
