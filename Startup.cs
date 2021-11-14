@@ -58,7 +58,10 @@ namespace PsychoHelp_API
             
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IPublicationService, PublicationService>();
-            
+
+            services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<ITagService, TagService>();
+                       
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             
             services.AddAutoMapper(typeof(Startup));
