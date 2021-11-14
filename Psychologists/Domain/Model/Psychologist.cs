@@ -1,3 +1,4 @@
+using PsychoHelp_API.Publications.Domain.Models;
 using System;
 using System.Collections.Generic;
 
@@ -25,6 +26,8 @@ namespace PsychoHelp_API.Psychologists.Domain.Model
 
         //RelationShips
         public IList<Psychologist_Schedule> Psychologist_Schedules { get; set; } = new List<Psychologist_Schedule>();
+
+        public IList<Publication> Publications { get; set; } = new List<Publication>();
         
     }
 }

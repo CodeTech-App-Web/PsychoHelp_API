@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using PsychoHelp_API.Domain.Repositories;
+using PsychoHelp_API.Psychologists.Domain.Repositories;
 using PsychoHelp_API.Publications.Domain.Models;
 using PsychoHelp_API.Publications.Domain.Repositories;
 using PsychoHelp_API.Publications.Domain.Services;
@@ -13,6 +14,7 @@ namespace PsychoHelp_API.Publications.Services
     {
         private readonly IPublicationRepository _publicationRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IPsychologistRepository _psychologistRepository;
 
         public PublicationService(IPublicationRepository publicationRepository, IUnitOfWork unitOfWork)
         {
@@ -27,6 +29,12 @@ namespace PsychoHelp_API.Publications.Services
 
         public async Task<PublicationResponse> SaveAsync(Publication publication)
         {
+            // Validate PsychologistId
+            var existingPsychologist = _psychologistRepository.FindByIdAsync(publication.PsychologistId);
+
+            if (existingPsychologist == null)
+                return new PublicationResponse("This psychologist doesn't exist");
+
             try
             {
                 await _publicationRepository.AddAsync(publication);
@@ -42,13 +50,20 @@ namespace PsychoHelp_API.Publications.Services
 
         public async Task<PublicationResponse> UpdateAsync(int id, Publication publication)
         {
+            // Validate If Publication Exists
             var existingPublication = await _publicationRepository.FindByIdAsync(id);
-
             if (existingPublication == null)
                 return new PublicationResponse("Publication not found.");
+
+            // Validate PsychologistId
+            var existingPsychologist = _psychologistRepository.FindByIdAsync(publication.PsychologistId);
+            if (existingPsychologist == null)
+                return new PublicationResponse("Invalid Psychologist");
+
             existingPublication.Title = publication.Title;
             existingPublication.Description = publication.Description;
-            existingPublication.Tags = publication.Tags;            
+            //existingPublication.Tags = publication.Tags;
+            existingPublication.PsychologistId = publication.PsychologistId;
 
             try
             {
@@ -82,6 +97,11 @@ namespace PsychoHelp_API.Publications.Services
             {
                 return new PublicationResponse($"An error occurred while deleting the Publication: {e.Message}");
             }
+        }
+
+        public async Task<IEnumerable<Publication>> ListByPsychologistIdAsync(int psychologistId)
+        {
+            return await _publicationRepository.FindByPsychologistIdAsync(psychologistId);
         }
     } 
 }

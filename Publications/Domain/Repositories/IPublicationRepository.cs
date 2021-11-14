@@ -9,6 +9,7 @@ namespace PsychoHelp_API.Publications.Domain.Repositories
         Task<IEnumerable<Publication>> ListAsync();
         Task AddAsync(Publication publication);
         Task<Publication> FindByIdAsync(int id);
+        Task<IEnumerable<Publication>> FindByPsychologistIdAsync(int psychologistId);
         void Update(Publication publication);
         void Remove(Publication publication);
         

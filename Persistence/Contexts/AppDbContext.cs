@@ -17,6 +17,7 @@ namespace PsychoHelp_API.Persistence.Contexts
         public DbSet<Logbook> Logbooks { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Publication> Publications { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -55,6 +56,12 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Psychologist>().Property(p => p.Cmp).IsRequired();
             builder.Entity<Psychologist>().Property(p => p.Genre).IsRequired();
             builder.Entity<Psychologist>().Property(p => p.SessionType).IsRequired();
+
+            // Relationships
+            builder.Entity<Psychologist>().HasMany(p => p.Publications)
+                .WithOne(p => p.Psychologist)
+                .HasForeignKey(p => p.PsychologistId);
+
             //Sample Data
             builder.Entity<Psychologist>().HasData
                 (
@@ -152,15 +159,35 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Publication>().HasKey(p => p.Id);
             builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Publication>().Property(p => p.Title).IsRequired().HasMaxLength(100);
-            builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(1000);
-            builder.Entity<Publication>().Property(p => p.Tags).IsRequired().HasMaxLength(50);
+            builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(1000);            
             builder.Entity<Publication>().Property(p => p.CreatedAt).HasColumnType("DateTime");
+
+            //Relationships
+            builder.Entity<Publication>().HasMany(p => p.Tags)
+                .WithOne(p => p.Publication)
+                .HasForeignKey(p => p.PublicationId);
 
             //Sample Data
             builder.Entity<Publication>().HasData
             (
-                new Publication { Id = 100, Title = "Prueba 1", Description = "Descripcion de Prueba", Tags = "Tag Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") },
-                new Publication { Id = 101, Title = "Prueba 2", Description = "Descripcion de Prueba", Tags = "Tag Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") }
+                new Publication { Id = 100, Title = "Prueba 1", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 1 },
+                new Publication { Id = 101, Title = "Prueba 2", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 2 }
+            );
+
+            //Tag
+
+            //Constrains
+            builder.Entity<Tag>().ToTable("Tags");
+            builder.Entity<Tag>().HasKey(p => p.Id);
+            builder.Entity<Tag>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Tag>().Property(p => p.Text).IsRequired();
+
+            //Sample Data
+            builder.Entity<Tag>().HasData
+            (
+            new Tag { Id = 1, Text = "Tag Prueba 1", PublicationId = 100 },
+            new Tag { Id = 2, Text = "Tag Prueba 2", PublicationId = 100 },
+            new Tag { Id = 3, Text = "Tag Prueba 3", PublicationId = 101 }
             );
 
             

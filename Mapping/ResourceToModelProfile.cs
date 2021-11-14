@@ -16,6 +16,7 @@ namespace PsychoHelp_API.Mapping
             CreateMap<SavePatientResource, Patient>();
             CreateMap<SaveLogBookResource, Logbook>();
             CreateMap<SavePublicationResource, Publication>();
+            CreateMap<SaveTagResource, Tag>();      
         }
     }
 }
