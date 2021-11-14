@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PsychoHelp_API.Persistence.Contexts;
@@ -21,12 +22,24 @@ namespace PsychoHelp_API.Publications.Persistence.Repositories
 
         public async Task<Publication> FindByIdAsync(int id)
         {
-            return await _context.Publications.FindAsync(id);
+            return await _context.Publications
+                .Include(p => p.Psychologist)
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task<IEnumerable<Publication>> FindByPsychologistIdAsync(int psychologistId)
+        {
+            return await _context.Publications
+                .Where(p => p.PsychologistId == psychologistId)
+                .Include(p => p.Psychologist)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<Publication>> ListAsync()
         {
-            return await _context.Publications.ToListAsync();
+            return await _context.Publications
+                .Include(p => p.Psychologist)
+                .ToListAsync();
         }
 
         public void Remove(Publication publication)

@@ -19,6 +19,7 @@ namespace PsychoHelp_API.Mapping
             CreateMap<Logbook, LogBookResource>();
             CreateMap<Publication, PublicationResource>();
             CreateMap<Appointment, AppointmentResource>();
+            CreateMap<Tag, TagResource>();
         }
     }
 }
