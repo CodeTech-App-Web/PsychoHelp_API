@@ -399,6 +399,11 @@ namespace PsychoHelp_API.Migrations
                         .HasColumnType("bigint")
                         .HasColumnName("phone");
 
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("state");
+
                     b.HasKey("Id")
                         .HasName("p_k_patient");
 

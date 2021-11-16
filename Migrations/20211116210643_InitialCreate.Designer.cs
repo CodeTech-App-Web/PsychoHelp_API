@@ -9,7 +9,7 @@ using PsychoHelp_API.Persistence.Contexts;
 namespace PsychoHelp_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211116185144_InitialCreate")]
+    [Migration("20211116210643_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -400,6 +400,11 @@ namespace PsychoHelp_API.Migrations
                         .HasMaxLength(9)
                         .HasColumnType("bigint")
                         .HasColumnName("phone");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("state");
 
                     b.HasKey("Id")
                         .HasName("p_k_patient");

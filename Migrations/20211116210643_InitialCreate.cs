@@ -21,6 +21,7 @@ namespace PsychoHelp_API.Migrations
                     phone = table.Column<long>(type: "bigint", maxLength: 9, nullable: false),
                     date = table.Column<DateTime>(type: "datetime", nullable: false),
                     gender = table.Column<string>(type: "text", nullable: false),
+                    state = table.Column<string>(type: "text", nullable: false),
                     img = table.Column<string>(type: "text", nullable: true),
                     log_book_id = table.Column<int>(type: "int", nullable: false)
                 },
