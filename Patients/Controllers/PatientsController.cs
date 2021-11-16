@@ -31,6 +31,26 @@ namespace PsychoHelp_API.patients.Controllers
             var resources = _mapper.Map<IEnumerable<Patient>, IEnumerable<PatientResource>>(patients);
             return resources;
         }
+        
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetIdAsync(int id)
+        {
+            var patient = await _patientService.GetByIdAsync(id);
+            if (patient == null)
+                return NotFound();
+            var resource = _mapper.Map<Patient, PatientResource>(patient);
+            return Ok(resource);
+        }
+        
+        [HttpGet ("email/{patientEmail}")]
+        public async Task<IActionResult> GetByEmailAsync(string patientEmail)
+        {
+            var patient = await _patientService.GetByEmailAsync(patientEmail);
+            if (patient == null)
+                return NotFound();
+            var resource = _mapper.Map<Patient, PatientResource>(patient);
+            return Ok(resource);
+        }
 
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SavePatientResource resource)

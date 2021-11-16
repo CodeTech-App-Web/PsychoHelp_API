@@ -8,7 +8,7 @@ namespace PsychoHelp_API.patients.Resources
         {
             LogBookName = "Name";
             PublicHistory = "Public History";
-            ConsultationReason = " ";
+            ConsultationReason = "Consultation Reason";
         }
 
         [Required]
