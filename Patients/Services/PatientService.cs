@@ -99,5 +99,15 @@ namespace PsychoHelp_API.patients.Services
                 return new PatientResponse($"An error occurred while deleting the product {e.Message}");
             }
         }
+
+        public Task<Patient> GetByIdAsync(int id)
+        {
+            return _patientRepository.FindByIdAsync(id);
+        }
+
+        public Task<Patient> GetByEmailAsync(string email)
+        {
+            return _patientRepository.FindByEmailAsync(email);
+        }
     }
 }

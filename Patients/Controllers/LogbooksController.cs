@@ -32,22 +32,6 @@ namespace PsychoHelp_API.patients.Controllers
             return resources;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] SaveLogBookResource resource)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState.GetErrorMessages());
-            var logbook = _mapper.Map<SaveLogBookResource, Logbook>(resource);
-            var result = await _logbookService.SaveAsync(logbook);
-
-            if (!result.Success)
-                return BadRequest(result.Message);
-
-            var logBookResource = _mapper.Map<Logbook, LogBookResource>(result.Resource);
-
-            return Ok(logBookResource);
-        }
-
         [HttpPut("{id}")]
         public async Task<ActionResult> PutAsync(int id, [FromBody] SaveLogBookResource resource)
         {
@@ -64,16 +48,5 @@ namespace PsychoHelp_API.patients.Controllers
             return Ok(logBookResource);
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteAsync(int id)
-        {
-            var result = await _logbookService.DeleteAsync(id);
-            if (!result.Success)
-                return BadRequest(result.Message);
-
-            var logBookResource = _mapper.Map<Logbook, LogBookResource>(result.Resource);
-            return Ok(logBookResource);
-        }
-        
     }
 }

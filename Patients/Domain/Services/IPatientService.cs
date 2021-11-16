@@ -11,5 +11,7 @@ namespace PsychoHelp_API.patients.Domain.Services
         Task<PatientResponse> SaveAsync(Patient patient);
         Task<PatientResponse> UpdateAsync(int id, Patient patient);
         Task<PatientResponse> DeleteAsync(int id);
+        Task<Patient> GetByIdAsync(int id);
+        Task<Patient> GetByEmailAsync(string email);
     }
 }

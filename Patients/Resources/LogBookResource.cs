@@ -8,6 +8,5 @@ namespace PsychoHelp_API.patients.Resources
         public string LogBookName { get; set; }
         public string PublicHistory { get; set; }
         public string ConsultationReason { get; set; }
-        public Patient Patient { get; set; }
     }
 }

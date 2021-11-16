@@ -125,9 +125,9 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Logbook>().Property(p => p.LogBookName).HasMaxLength(50);
             
             //Relationships
-            builder.Entity<Logbook>().HasOne(p => p.Patient)
+            /*builder.Entity<Logbook>().HasOne(p => p.Patient)
                 .WithOne(p => p.Logbook)
-                .HasForeignKey<Patient>(p => p.Id);
+                .HasForeignKey<Patient>(p => p.Id);*/
             
             //Patient
             
@@ -143,6 +143,10 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Patient>().Property(p => p.Phone).IsRequired().HasMaxLength(9);
             builder.Entity<Patient>().Property(p => p.Date).IsRequired();
             builder.Entity<Patient>().Property(p => p.Img);
+            builder.Entity<Patient>().HasOne(p => p.Logbook)
+                .WithOne(p => p.Patient)
+                .HasForeignKey<Logbook>(p => p.Id)
+                .OnDelete(DeleteBehavior.Cascade);
 
             //Publication
 
@@ -212,7 +216,6 @@ namespace PsychoHelp_API.Persistence.Contexts
             
             // Apply Snake Case Naming Convention to All Objects
             builder.UseSnakeCaseNamingConvention();
-
         }
     }
 }
