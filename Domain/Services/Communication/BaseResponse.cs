@@ -15,7 +15,7 @@ namespace PsychoHelp_API.Domain.Services.Communication
             Success = false;
             Message = message;
         }
-
+        
         protected BaseResponse(T resource) 
         {
             Success = true;
@@ -23,3 +23,4 @@ namespace PsychoHelp_API.Domain.Services.Communication
         }
     }
 }
+

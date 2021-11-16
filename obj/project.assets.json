@@ -399,6 +399,18 @@
           "build/Swashbuckle.AspNetCore.props": {}
         }
       },
+      "Swashbuckle.AspNetCore.Annotations/6.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3"
+        },
+        "compile": {
+          "lib/net5.0/Swashbuckle.AspNetCore.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Swashbuckle.AspNetCore.Annotations.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/6.2.3": {
         "type": "package",
         "dependencies": {
@@ -1304,6 +1316,29 @@
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
+    "Swashbuckle.AspNetCore.Annotations/6.2.3": {
+      "sha512": "I8rcqNo+60+zJl5TpRF9JZSnGYPGJmgtlK+ZyTDsG+0lRDjMCPTPndcSSgeUpUh1XsMPuCx38hNu78Xf+xvjeg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.annotations/6.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/net5.0/Swashbuckle.AspNetCore.Annotations.pdb",
+        "lib/net5.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "lib/net6.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/net6.0/Swashbuckle.AspNetCore.Annotations.pdb",
+        "lib/net6.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "swashbuckle.aspnetcore.annotations.6.2.3.nupkg.sha512",
+        "swashbuckle.aspnetcore.annotations.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore.Swagger/6.2.3": {
       "sha512": "qOF7j1sL0bWm8g/qqHVPCvkO3JlVvUIB8WfC98kSh6BT5y5DAnBNctfac7XR5EZf+eD7/WasvANncTqwZYfmWQ==",
       "type": "package",
@@ -1965,24 +2000,35 @@
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.11",
       "MySql.EntityFrameworkCore >= 5.0.8",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "Swashbuckle.AspNetCore.Annotations >= 6.2.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josep\\.nuget\\packages\\": {}
+    "C:\\Users\\TARAZONA\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\PsychoHelp_API.csproj",
+      "projectUniqueName": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
       "projectName": "PsychoHelp_API",
-      "projectPath": "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\PsychoHelp_API.csproj",
-      "packagesPath": "C:\\Users\\josep\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\obj\\",
+      "projectPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
+      "packagesPath": "C:\\Users\\TARAZONA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\josep\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\TARAZONA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -2046,6 +2092,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"
+          },
+          "Swashbuckle.AspNetCore.Annotations": {
+            "target": "Package",
+            "version": "[6.2.3, )"
           }
         },
         "imports": [
@@ -2066,7 +2116,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

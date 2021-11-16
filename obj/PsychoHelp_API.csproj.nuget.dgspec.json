@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\PsychoHelp_API.csproj": {}
+    "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\PsychoHelp_API.csproj": {
+    "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\PsychoHelp_API.csproj",
+        "projectUniqueName": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
         "projectName": "PsychoHelp_API",
-        "projectPath": "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\PsychoHelp_API.csproj",
-        "packagesPath": "C:\\Users\\josep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josep\\Desktop\\Ciclo 2021-2\\Aplicaciones Web\\PsychoHelp_API\\obj\\",
+        "projectPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\PsychoHelp_API.csproj",
+        "packagesPath": "C:\\Users\\TARAZONA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TARAZONA\\Desktop\\APP WEB\\API\\PsychoHelp_API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\josep\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\TARAZONA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -79,6 +86,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -99,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
