@@ -66,6 +66,7 @@ namespace PsychoHelp_API.patients.Services
             existingPatient.Img = patient.Img;
             existingPatient.Password = patient.Password;
             existingPatient.Phone = patient.Phone;
+            existingPatient.State = patient.State;
 
             try
             {

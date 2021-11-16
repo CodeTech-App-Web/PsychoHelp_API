@@ -143,6 +143,7 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Patient>().Property(p => p.Gender).IsRequired();
             builder.Entity<Patient>().Property(p => p.Phone).IsRequired().HasMaxLength(9);
             builder.Entity<Patient>().Property(p => p.Date).IsRequired();
+            builder.Entity<Patient>().Property(p => p.State).IsRequired();
             builder.Entity<Patient>().Property(p => p.Img);
             
             //Relationships

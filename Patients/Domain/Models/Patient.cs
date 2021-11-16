@@ -15,6 +15,7 @@ namespace PsychoHelp_API.patients.Domain.Models
         public long Phone { get; set; }
         public DateTime Date { get; set; }
         public string Gender { get; set; }
+        public string State { get;set; }
         public string Img { get; set; }
         // Relationships
         public int LogBookId { get; set; }

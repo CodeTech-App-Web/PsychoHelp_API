@@ -11,6 +11,9 @@ namespace PsychoHelp_API.patients.Resources
         [MaxLength(50)]
         public string LastName { get; set; }
         [Required]
+        [MaxLength(50)]
+        public string State { get; set; }
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
         [Required]
