@@ -73,7 +73,16 @@ namespace PsychoHelp_API
             services.AddScoped<ITagService, TagService>();
                        
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Psychohelp",
+                    builder => builder.AllowAnyOrigin());
+            });
+
+            services.AddRouting(options => options.LowercaseUrls = true);
+
+
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
             {
@@ -90,6 +99,13 @@ namespace PsychoHelp_API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PsychoHelp_API v1"));
             }
+
+            app.UseCors(options =>
+            {
+                options.WithOrigins("*");
+                options.AllowAnyMethod();
+                options.AllowAnyHeader();
+            });
 
             app.UseHttpsRedirection();
 
