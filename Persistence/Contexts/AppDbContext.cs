@@ -50,7 +50,8 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Psychologist>().Property(p => p.SessionType).IsRequired();
 
             // Relationships
-            builder.Entity<Psychologist>().HasMany(p => p.Publications)
+            builder.Entity<Psychologist>()
+                .HasMany(p => p.Publications)
                 .WithOne(p => p.Psychologist)
                 .HasForeignKey(p => p.PsychologistId);
 
@@ -143,6 +144,8 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Patient>().Property(p => p.Phone).IsRequired().HasMaxLength(9);
             builder.Entity<Patient>().Property(p => p.Date).IsRequired();
             builder.Entity<Patient>().Property(p => p.Img);
+            
+            //Relationships
             builder.Entity<Patient>().HasOne(p => p.Logbook)
                 .WithOne(p => p.Patient)
                 .HasForeignKey<Logbook>(p => p.Id)
@@ -166,8 +169,8 @@ namespace PsychoHelp_API.Persistence.Contexts
             //Sample Data
             builder.Entity<Publication>().HasData
             (
-                new Publication { Id = 100, Title = "Prueba 1", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 1 },
-                new Publication { Id = 101, Title = "Prueba 2", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 2 }
+                new Publication { Id = 1, Title = "Prueba 1", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 1 },
+                new Publication { Id = 2, Title = "Prueba 2", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 2 }
             );
 
             //Tag
@@ -181,9 +184,9 @@ namespace PsychoHelp_API.Persistence.Contexts
             //Sample Data
             builder.Entity<Tag>().HasData
             (
-            new Tag { Id = 1, Text = "Tag Prueba 1", PublicationId = 100 },
-            new Tag { Id = 2, Text = "Tag Prueba 2", PublicationId = 100 },
-            new Tag { Id = 3, Text = "Tag Prueba 3", PublicationId = 101 }
+            new Tag { Id = 1, Text = "Tag Prueba 1", PublicationId = 1 },
+            new Tag { Id = 2, Text = "Tag Prueba 2", PublicationId = 1 },
+            new Tag { Id = 3, Text = "Tag Prueba 3", PublicationId = 2 }
             );
 
             //Appointment 
@@ -193,26 +196,28 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Appointment>().HasKey(p => p.Id);
             builder.Entity<Appointment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Appointment>().Property(p => p.PsychoNotes).IsRequired().HasMaxLength(100);
-            builder.Entity<Appointment>().Property(p => p.ScheduleDate).HasColumnType("ScheduleDate");
-            builder.Entity<Appointment>().Property(p => p.CreatedAt).HasColumnType("DateTime");
+            builder.Entity<Appointment>().Property(p => p.ScheduleDate).HasColumnType("timestamp");
+            builder.Entity<Appointment>().Property(p => p.CreatedAt).HasColumnType("timestamp");
             
             //Relationships
             builder.Entity<Appointment>()
                 .HasOne(p => p.psychologist)
                 .WithMany(pp => pp.Appointments)
-                .HasForeignKey(pi => pi.PsychoId);
-            
+                .HasForeignKey(pi => pi.PsychoId)
+                .HasConstraintName("fk_appointment_psycho");
+
             builder.Entity<Appointment>()
                 .HasOne(p => p.patient)
                 .WithMany(pp => pp.Appointments)
-                .HasForeignKey(pi => pi.PatientId);
-            
+                .HasForeignKey(pi => pi.PatientId)
+                .HasConstraintName("fk_appointment_patient");
+
             //Sample Data
-            builder.Entity<Appointment>().HasData
-            (
-                new Appointment { Id = 8, PsychoNotes = "Esta es una prueba del psicologo", ScheduleDate = DateTime.Parse("2021-11-03T10:00:20.450Z"), CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") },
-                new Appointment { Id = 18, PsychoNotes = "Esta es la segunda prueba del psicologo", ScheduleDate = DateTime.Parse("2021-11-02T16:40:00.450Z"), CreatedAt = DateTime.Parse("2021-11-02T07:49:54.450Z") }
-            );
+            // builder.Entity<Appointment>().HasData
+            // (
+            //     new Appointment { Id = 8, PsychoNotes = "Esta es una prueba del psicologo", ScheduleDate = DateTime.Parse("2021-11-03T10:00:20.450Z"), CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z") },
+            //     new Appointment { Id = 18, PsychoNotes = "Esta es la segunda prueba del psicologo", ScheduleDate = DateTime.Parse("2021-11-02T16:40:00.450Z"), CreatedAt = DateTime.Parse("2021-11-02T07:49:54.450Z") }
+            // );
             
             // Apply Snake Case Naming Convention to All Objects
             builder.UseSnakeCaseNamingConvention();
