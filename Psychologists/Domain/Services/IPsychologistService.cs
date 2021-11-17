@@ -15,5 +15,7 @@ namespace PsychoHelp_API.Psychologists.Domain.Services
         Task<PsychologistResponse> UpdateAsync(int id, Psychologist psychologist);
         Task<PsychologistResponse> DeleteAsync(int id);
 
+        Task<Psychologist> GetByIdAsync(int id);
+
     }
 }

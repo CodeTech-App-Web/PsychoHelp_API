@@ -47,13 +47,11 @@ namespace PsychoHelp_API.Psychologists.Resources
         [Required]
         public int Cmp { get; set; }
 
-        // [Required]
-        // [Range(0, 3)]
-        // public int Genre { get; set; }
-        //
-        // [Required]
-        // [Range(0, 3)]
-        // public int SessionType { get; set; }
+        [Required]
+        public string Genre { get; set; }
+        
+        [Required] 
+        public string SessionType { get; set; }
 
 
     }
