@@ -22,8 +22,8 @@ namespace PsychoHelp_API.Psychologists.Domain.Model
         public bool New { get; set; }
         public string Img { get; set; }
         public int Cmp { get; set; }
-        public EGenre Genre { get; set; }
-        public ESessionType SessionType { get; set; }
+        public string Genre { get; set; }
+        public string SessionType { get; set; }
         
         //RelationShip
         public virtual  ICollection<Schedule> Schedules { get; set; }

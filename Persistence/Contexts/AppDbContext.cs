@@ -74,8 +74,8 @@ namespace PsychoHelp_API.Persistence.Contexts
                     New = false, 
                     Img = "sadsdasda", 
                     Cmp = 987456, 
-                    Genre = EGenre.Male, 
-                    SessionType = ESessionType.Individual
+                    Genre = "Male", 
+                    SessionType = "Individual"
                 },
                 new Psychologist
                 {
@@ -93,8 +93,8 @@ namespace PsychoHelp_API.Persistence.Contexts
                     New = false,
                     Img = "sadsdasda",
                     Cmp = 123456,
-                    Genre = EGenre.Female,
-                    SessionType = ESessionType.Individual
+                    Genre = "Male",
+                    SessionType = "Individual"
                 }
                 );
 

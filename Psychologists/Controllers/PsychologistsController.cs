@@ -33,6 +33,16 @@ namespace PsychoHelp_API.Psychologists.Controllers
             return resources;
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetIdAsync(int id)
+        {
+            var psychologist = await _psychologistService.GetByIdAsync(id);
+            if (psychologist == null)
+                return NotFound();
+            var resource = _mapper.Map<Psychologist, PsychologistResource>(psychologist);
+            return Ok(resource);
+        }
+
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SavePsychologistResource resource)
         {

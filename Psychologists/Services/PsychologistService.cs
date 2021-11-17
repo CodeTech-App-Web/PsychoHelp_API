@@ -62,6 +62,8 @@ namespace PsychoHelp_API.Psychologists.Services
             existingPsychologist.New = psychologist.New;
             existingPsychologist.Img = psychologist.Img;
             existingPsychologist.Cmp = psychologist.Cmp;
+            existingPsychologist.Genre = psychologist.Genre;
+            existingPsychologist.SessionType = psychologist.SessionType;
             
             
             try
@@ -94,6 +96,11 @@ namespace PsychoHelp_API.Psychologists.Services
             {
                 return new PsychologistResponse($"An error occurred while deleting the psychologist: {e.Message}");
             }
+        }
+
+        public Task<Psychologist> GetByIdAsync(int id)
+        {
+            return _psychologistRepository.FindByIdAsync(id);
         }
     }
 }
