@@ -91,30 +91,44 @@ namespace PsychoHelp_API.Psychologists.Controllers
 
         }
 
-        // [HttpPut("{Id}/{ScheduleId}")]
-        // public async Task<IActionResult> AddSchedule([FromRoute] int Id, [FromRoute] int ScheduleId)
-        // {
-        //     var psychologist = await _context.Psychologists.Include(p => p.Schedules)
-        //         .SingleAsync(p => p.Id == Id);
-        //
-        //     var schedule = await _context.Schedules.SingleAsync(s => s.ScheduleId == ScheduleId);
-        //     if (psychologist == null || schedule == null)
-        //     {
-        //         return NotFound();
-        //     }
-        //     
-        //     psychologist.Schedules.Add(schedule);
-        //
-        //     try
-        //     {
-        //         await _context.SaveChangesAsync();
-        //     }
-        //     catch (Exception e)
-        //     {
-        //         return BadRequest(e.Message);
-        //     }
-        //
-        //     return Ok();
-        // }
+        [HttpPost("{Id}/{ScheduleId}")]
+        public async Task<IActionResult> AddSchedule([FromRoute] int Id, [FromRoute] int ScheduleId)
+        {
+            var psychologist = await _context.Psychologists.Include(p => p.Schedules)
+                .SingleAsync(p => p.Id == Id);
+        
+            var schedule = await _context.Schedules.SingleAsync(s => s.Id == ScheduleId);
+            if (psychologist == null || schedule == null)
+            {
+                return NotFound();
+            }
+            
+            psychologist.Schedules.Add(schedule);
+        
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        
+            return Ok();
+        }
+
+        [HttpGet("schedule/{Id}")]
+        public async Task<IEnumerable<ScheduleResource>> GetScheduleFromPsycho([FromRoute] int Id)
+        {
+            var psychologists = await _context.Psychologists.Include(d => d.Schedules)
+                .FirstOrDefaultAsync(d => d.Id == Id);
+
+            var schedules = psychologists.Schedules.ToList();
+            return schedules.Select(c => new ScheduleResource
+            {
+                Id = c.Id,
+                Time = c.Time
+            });
+        }
     }
 }
