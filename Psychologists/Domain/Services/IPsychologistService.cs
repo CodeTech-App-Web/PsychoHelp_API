@@ -16,6 +16,7 @@ namespace PsychoHelp_API.Psychologists.Domain.Services
         Task<PsychologistResponse> DeleteAsync(int id);
 
         Task<Psychologist> GetByIdAsync(int id);
+        Task<Psychologist> GetByEmailAsync(string email);
 
     }
 }

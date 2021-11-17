@@ -117,6 +117,16 @@ namespace PsychoHelp_API.Psychologists.Controllers
             return Ok();
         }
 
+        [HttpGet("email/{psychologistEmail}")]
+        public async Task<IActionResult> GetByEmailAsync(string psychologistEmail)
+        {
+            var psychologist = await _psychologistService.GetByEmailAsync(psychologistEmail);
+            if (psychologist == null)
+                return NotFound();
+            var resource = _mapper.Map<Psychologist, PsychologistResource>(psychologist);
+            return Ok(resource);
+        }
+
         [HttpGet("schedule/{Id}")]
         public async Task<IEnumerable<ScheduleResource>> GetScheduleFromPsycho([FromRoute] int Id)
         {
