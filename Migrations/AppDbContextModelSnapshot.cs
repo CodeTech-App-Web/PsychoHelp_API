@@ -97,8 +97,9 @@ namespace PsychoHelp_API.Migrations
                         .HasColumnType("text")
                         .HasColumnName("formation");
 
-                    b.Property<byte>("Genre")
-                        .HasColumnType("tinyint unsigned")
+                    b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasColumnType("text")
                         .HasColumnName("genre");
 
                     b.Property<string>("Img")
@@ -125,8 +126,9 @@ namespace PsychoHelp_API.Migrations
                         .HasColumnType("int")
                         .HasColumnName("phone");
 
-                    b.Property<byte>("SessionType")
-                        .HasColumnType("tinyint unsigned")
+                    b.Property<string>("SessionType")
+                        .IsRequired()
+                        .HasColumnType("text")
                         .HasColumnName("session_type");
 
                     b.Property<string>("Specialization")
@@ -150,13 +152,13 @@ namespace PsychoHelp_API.Migrations
                             Dni = 12345678,
                             Email = "usuarios1@hotmail.com",
                             Formation = "UPC",
-                            Genre = (byte)1,
+                            Genre = "Male",
                             Img = "sadsdasda",
                             Name = "Juan Garcia",
                             New = false,
                             Password = "123456789",
                             Phone = 123456789,
-                            SessionType = (byte)1,
+                            SessionType = "Individual",
                             Specialization = "autoestima"
                         },
                         new
@@ -169,13 +171,13 @@ namespace PsychoHelp_API.Migrations
                             Dni = 12344569,
                             Email = "usuarios2@hotmail.com",
                             Formation = "UPC",
-                            Genre = (byte)2,
+                            Genre = "Male",
                             Img = "sadsdasda",
                             Name = "Ana Flores",
                             New = false,
                             Password = "123456",
                             Phone = 987456123,
-                            SessionType = (byte)1,
+                            SessionType = "Individual",
                             Specialization = "autoestima"
                         });
                 });
@@ -398,6 +400,11 @@ namespace PsychoHelp_API.Migrations
                         .HasMaxLength(9)
                         .HasColumnType("bigint")
                         .HasColumnName("phone");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("state");
 
                     b.HasKey("Id")
                         .HasName("p_k_patient");

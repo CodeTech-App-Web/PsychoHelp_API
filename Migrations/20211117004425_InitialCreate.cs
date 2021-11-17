@@ -21,6 +21,7 @@ namespace PsychoHelp_API.Migrations
                     phone = table.Column<long>(type: "bigint", maxLength: 9, nullable: false),
                     date = table.Column<DateTime>(type: "datetime", nullable: false),
                     gender = table.Column<string>(type: "text", nullable: false),
+                    state = table.Column<string>(type: "text", nullable: false),
                     img = table.Column<string>(type: "text", nullable: true),
                     log_book_id = table.Column<int>(type: "int", nullable: false)
                 },
@@ -48,8 +49,8 @@ namespace PsychoHelp_API.Migrations
                     @new = table.Column<bool>(name: "new", type: "tinyint(1)", nullable: false),
                     img = table.Column<string>(type: "text", nullable: false),
                     cmp = table.Column<int>(type: "int", nullable: false),
-                    genre = table.Column<byte>(type: "tinyint unsigned", nullable: false),
-                    session_type = table.Column<byte>(type: "tinyint unsigned", nullable: false)
+                    genre = table.Column<string>(type: "text", nullable: false),
+                    session_type = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -190,8 +191,8 @@ namespace PsychoHelp_API.Migrations
                 columns: new[] { "id", "about", "active", "age", "cmp", "dni", "email", "formation", "genre", "img", "name", "new", "password", "phone", "session_type", "specialization" },
                 values: new object[,]
                 {
-                    { 1, "qwertyuiop", false, "28/04/2001", 987456, 12345678, "usuarios1@hotmail.com", "UPC", (byte)1, "sadsdasda", "Juan Garcia", false, "123456789", 123456789, (byte)1, "autoestima" },
-                    { 2, "qwertyuiop", false, "28/04/2001", 123456, 12344569, "usuarios2@hotmail.com", "UPC", (byte)2, "sadsdasda", "Ana Flores", false, "123456", 987456123, (byte)1, "autoestima" }
+                    { 1, "qwertyuiop", false, "28/04/2001", 987456, 12345678, "usuarios1@hotmail.com", "UPC", "Male", "sadsdasda", "Juan Garcia", false, "123456789", 123456789, "Individual", "autoestima" },
+                    { 2, "qwertyuiop", false, "28/04/2001", 123456, 12344569, "usuarios2@hotmail.com", "UPC", "Male", "sadsdasda", "Ana Flores", false, "123456", 987456123, "Individual", "autoestima" }
                 });
 
             migrationBuilder.InsertData(

@@ -4,11 +4,15 @@ using PsychoHelp_API.Psychologists.Domain.Model;
 using PsychoHelp_API.Psychologists.Domain.Services;
 using PsychoHelp_API.Psychologists.Resources;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using PsychoHelp_API.Extensions;
+using PsychoHelp_API.Persistence.Contexts;
 using PsychoHelp_API.Psychologists.Domain.Services.Communication;
+using PsychoHelp_API.Psychologists.Persistence.Repositories;
 
 namespace PsychoHelp_API.Psychologists.Controllers
 {
@@ -18,11 +22,13 @@ namespace PsychoHelp_API.Psychologists.Controllers
     {
         private readonly IPsychologistService _psychologistService;
         private readonly IMapper _mapper;
+        private readonly AppDbContext _context;
 
-        public PsychologistsController(IPsychologistService psychologistService, IMapper mapper)
+        public PsychologistsController(IPsychologistService psychologistService, IMapper mapper, AppDbContext context)
         {
             _psychologistService = psychologistService;
             _mapper = mapper;
+            _context = context;
         }
 
         [HttpGet]
@@ -60,6 +66,14 @@ namespace PsychoHelp_API.Psychologists.Controllers
             return Ok(psychologistResource);
         }
 
+        // [HttpGet("{PsychologistId}")]
+        // public async Task<IEnumerable<ScheduleRepository>> GetSchedulesFromPsycho([FromRoute] int PsychologistId)
+        // {
+        //     
+        // }
+       
+        
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SavePsychologistResource resource)
         {
@@ -76,5 +90,31 @@ namespace PsychoHelp_API.Psychologists.Controllers
             return Ok(psychologistResource);
 
         }
+
+        // [HttpPut("{Id}/{ScheduleId}")]
+        // public async Task<IActionResult> AddSchedule([FromRoute] int Id, [FromRoute] int ScheduleId)
+        // {
+        //     var psychologist = await _context.Psychologists.Include(p => p.Schedules)
+        //         .SingleAsync(p => p.Id == Id);
+        //
+        //     var schedule = await _context.Schedules.SingleAsync(s => s.ScheduleId == ScheduleId);
+        //     if (psychologist == null || schedule == null)
+        //     {
+        //         return NotFound();
+        //     }
+        //     
+        //     psychologist.Schedules.Add(schedule);
+        //
+        //     try
+        //     {
+        //         await _context.SaveChangesAsync();
+        //     }
+        //     catch (Exception e)
+        //     {
+        //         return BadRequest(e.Message);
+        //     }
+        //
+        //     return Ok();
+        // }
     }
 }
