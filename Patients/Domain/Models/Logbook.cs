@@ -9,5 +9,10 @@
         public string ConsultationReason { get; set; }
         // Relationships
         public Patient Patient { get; set; }
+        
+        public void SetId(int id)
+        {
+            this.Id = id;
+        }
     }
 }

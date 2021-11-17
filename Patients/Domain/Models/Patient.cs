@@ -19,9 +19,13 @@ namespace PsychoHelp_API.patients.Domain.Models
         public string Img { get; set; }
         // Relationships
         public int LogBookId { get; set; }
+        
+        public void SetLogBookId(int id)
+        {
+            this.LogBookId = id;
+        }
         public Logbook Logbook { get; set; }
         public IList<Appointment> Appointments { get; set; }= new List<Appointment>();
-
         public void SetLogBook(Logbook logbook)
         {
             this.Logbook = logbook;

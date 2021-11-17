@@ -1,11 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PsychoHelp_API.patients.Domain.Models;
 using PsychoHelp_API.patients.Domain.Services;
 using PsychoHelp_API.Extensions;
+using PsychoHelp_API.patients.Domain.Repositories;
 using PsychoHelp_API.patients.Resources;
+using PsychoHelp_API.Persistence.Contexts;
 
 namespace PsychoHelp_API.patients.Controllers
 {
@@ -15,13 +20,15 @@ namespace PsychoHelp_API.patients.Controllers
     {
         private readonly IPatientService _patientService;
         private readonly ILogBookService _logBookService;
+        private readonly AppDbContext _context;
         private readonly IMapper _mapper;
 
-        public PatientsController(IPatientService patientService, IMapper mapper, ILogBookService logBookService)
+        public PatientsController(IPatientService patientService, IMapper mapper, ILogBookService logBookService, AppDbContext context)
         {
             _patientService = patientService;
             _mapper = mapper;
             _logBookService = logBookService;
+            _context = context;
         }
 
         [HttpGet]
@@ -51,13 +58,29 @@ namespace PsychoHelp_API.patients.Controllers
             var resource = _mapper.Map<Patient, PatientResource>(patient);
             return Ok(resource);
         }
+        
+        [HttpGet]
+        [Route("string")]
+        public async Task<String> getString()
+        {
+            var logbookSet = await _context.Logbooks.OrderByDescending(p => p.Id).FirstOrDefaultAsync();
+            String data;
+            if (logbookSet == null)
+            {
+                data = "vacio";
+            }
+            else
+            {
+                data = "algo";
+            }
+            return data;
+        }
 
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SavePatientResource resource)
         {
             //Logbook
             SaveLogBookResource logbookResource = new SaveLogBookResource();
-            
             var logbook = _mapper.Map<SaveLogBookResource, Logbook>(logbookResource);
             await _logBookService.SaveAsync(logbook);
 
@@ -65,9 +88,18 @@ namespace PsychoHelp_API.patients.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
             var patient = _mapper.Map<SavePatientResource, Patient>(resource);
+            var logbookSet = await _context.Logbooks.OrderByDescending(p => p.Id).FirstOrDefaultAsync();
+            if (logbookSet == null)
+            {
+                logbook.SetId(1);
+            }
+            else
+            { 
+                logbook.SetId(logbookSet.Id + 1);
+            }
+            patient.SetLogBookId(logbook.Id);
             patient.SetLogBook(logbook);
             var result = await _patientService.SaveAsync(patient);
-
             if (!result.Success)
                 return BadRequest(result.Message);
 

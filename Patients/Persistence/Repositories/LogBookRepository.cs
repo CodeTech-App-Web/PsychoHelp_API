@@ -32,6 +32,7 @@ namespace PsychoHelp_API.patients.Persistence.Repositories
             return await _context.Logbooks
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
+        
 
         public async Task AddAsync(Logbook logbook)
         {

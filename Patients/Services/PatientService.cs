@@ -27,11 +27,6 @@ namespace PsychoHelp_API.patients.Services
 
         public async Task<PatientResponse> SaveAsync(Patient patient)
         {
-            //Validate Name
-            var existingPatientWithName = await _patientRepository.FindByNameAsync(patient.FirstName + patient.LastName);
-
-            if (existingPatientWithName != null)
-                return new PatientResponse("Patient Name already exists.");
 
             try
             {
@@ -52,12 +47,6 @@ namespace PsychoHelp_API.patients.Services
 
             if (existingPatient == null)
                 return new PatientResponse("Product not found");
-
-            //Validate Name
-            var existingPatientWithName = await _patientRepository.FindByNameAsync(patient.FirstName + patient.LastName);
-
-            if (existingPatientWithName != null && existingPatientWithName.Id != existingPatient.Id)
-                return new PatientResponse("Product Name already exists.");
 
             existingPatient.FirstName = patient.FirstName;
             existingPatient.LastName = patient.LastName;
