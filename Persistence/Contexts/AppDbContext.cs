@@ -199,6 +199,10 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Appointment>().Property(p => p.PsychoNotes).IsRequired().HasMaxLength(100);
             builder.Entity<Appointment>().Property(p => p.ScheduleDate).HasColumnType("timestamp");
             builder.Entity<Appointment>().Property(p => p.CreatedAt).HasColumnType("timestamp");
+            builder.Entity<Appointment>().Property(p => p.PersonalHistory).IsRequired().HasMaxLength(200);
+            builder.Entity<Appointment>().Property(p => p.Treatment).IsRequired().HasMaxLength(200);
+            builder.Entity<Appointment>().Property(p => p.TestRealized).IsRequired().HasMaxLength(200);
+            builder.Entity<Appointment>().Property(p => p.Motive).IsRequired().HasMaxLength(200);
             
             //Relationships
             builder.Entity<Appointment>()

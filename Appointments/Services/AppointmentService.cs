@@ -6,6 +6,8 @@ using PsychoHelp_API.Appointments.Domain.Models;
 using PsychoHelp_API.Appointments.Domain.Repositories;
 using PsychoHelp_API.Appointments.Domain.Services;
 using PsychoHelp_API.Appointments.Domain.Services.Communication;
+using PsychoHelp_API.patients.Domain.Models;
+using PsychoHelp_API.patients.Domain.Services.Communication;
 
 namespace PsychoHelp_API.Appointments.Services
 {
@@ -48,7 +50,10 @@ namespace PsychoHelp_API.Appointments.Services
                 return new AppointmentResponse("Appointment not found.");
             existingAppointment.PsychoNotes = appointment.PsychoNotes;
             existingAppointment.ScheduleDate = appointment.ScheduleDate;
-
+            existingAppointment.Motive = appointment.Motive;
+            existingAppointment.PersonalHistory = appointment.PersonalHistory;
+            existingAppointment.TestRealized = appointment.TestRealized;
+            existingAppointment.Treatment = appointment.Treatment;
             try
             {
                 _appointmentRepository.Update(existingAppointment);
@@ -81,6 +86,26 @@ namespace PsychoHelp_API.Appointments.Services
             {
                 return new AppointmentResponse($"An error occurred while deleting the Appointment: {e.Message}");
             }
+        }
+
+        public async Task<Appointment> GetByIdAsync(int id)
+        {
+            return await _appointmentRepository.FindByIdAsync(id);
+        }
+
+        public async Task<IEnumerable<Appointment>> GetByPsychologistIdAsync(int id)
+        {
+            return await _appointmentRepository.FindAppointmentsByPsychologistIdAsync(id);
+        }
+
+        public async Task<IEnumerable<Patient>> GetPatientsByPsychologistIdAsync(int id)
+        {
+            return await _appointmentRepository.FindPatientsByPsychologistIdAsync(id);
+        }
+
+        public async Task<IEnumerable<Appointment>> GetAppointmentByPatientAndPsychologistIdAsync(int patientId, int psychologistId)
+        {
+            return await _appointmentRepository.FindByPatientAndPsychologistIdAsync(patientId, psychologistId);
         }
     }
 }

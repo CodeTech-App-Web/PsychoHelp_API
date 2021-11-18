@@ -10,5 +10,9 @@ namespace PsychoHelp_API.Appointments.Resources
         public string PsychoNotes { get; set; }
         public DateTime ScheduleDate { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string Motive { get; set; }
+        public string PersonalHistory { get; set; }
+        public string TestRealized { get; set; }
+        public string Treatment { get; set; }
     }
 }
