@@ -3,14 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PsychoHelp_API.Appointments.Resources
 {
-    public class SaveAppointmentResource
+    public class UpdateAppointmentResource
     {
-        [Required]
-        public int PatientId { get; set; }
-        
-        [Required]
-        public int PsychoId { get; set; }
-        
         [Required]
         [MaxLength(100)]
         public string PsychoNotes { get; set; }

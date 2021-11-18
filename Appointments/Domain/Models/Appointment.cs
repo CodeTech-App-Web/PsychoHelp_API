@@ -12,6 +12,11 @@ namespace PsychoHelp_API.Appointments.Domain.Models
         public DateTime ScheduleDate { get; set; }
         public DateTime CreatedAt { get; set; }
         
+        public string Motive { get; set; }
+        public string PersonalHistory { get; set; }
+        public string TestRealized { get; set; }
+        public string Treatment { get; set; }
+        
         //RelationShips
         public Patient patient { get; set; }
         public int PatientId { get; set; }
