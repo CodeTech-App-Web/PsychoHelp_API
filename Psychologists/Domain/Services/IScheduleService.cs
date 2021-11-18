@@ -10,5 +10,7 @@ namespace PsychoHelp_API.Psychologists.Domain.Services
     {
         Task<IEnumerable<Schedule>> ListAsync();
         Task<ScheduleResponse> SaveAsync(Schedule schedule);
+
+        Task<Schedule> GetByIdScheduleAsync(int id);
     }
 }

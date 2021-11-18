@@ -8,5 +8,6 @@ namespace PsychoHelp_API.Psychologists.Domain.Repositories
     {
         Task <IEnumerable<Schedule>> ListAsync();
         Task AddAsync(Schedule schedule);
+        Task<Schedule> FindByIdScheduleAsync(int id);
     }
 }
