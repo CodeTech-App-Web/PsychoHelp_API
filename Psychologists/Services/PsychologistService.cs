@@ -102,5 +102,10 @@ namespace PsychoHelp_API.Psychologists.Services
         {
             return _psychologistRepository.FindByIdAsync(id);
         }
+
+        public Task<Psychologist> GetByEmailAsync(string email)
+        {
+            return _psychologistRepository.FindByEmailAsync(email);
+        }
     }
 }

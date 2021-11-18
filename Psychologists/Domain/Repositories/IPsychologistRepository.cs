@@ -11,6 +11,7 @@ namespace PsychoHelp_API.Psychologists.Domain.Repositories
         Task<IEnumerable<Psychologist>> ListAsync();
         Task AddAsync(Psychologist psychologist);
         Task<Psychologist> FindByIdAsync(int id);
+        Task<Psychologist> FindByEmailAsync(string email);
         void Update(Psychologist psychologist);
         void Remove(Psychologist psychologist);
     }

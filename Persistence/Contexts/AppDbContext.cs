@@ -112,7 +112,13 @@ namespace PsychoHelp_API.Persistence.Contexts
                 new Schedule { Id = 1, Time = "8:00"},
                 new Schedule { Id = 2, Time = "9:00" },
                 new Schedule { Id = 3, Time = "10:00" },
-                new Schedule { Id = 4, Time = "11:00" }
+                new Schedule { Id = 4, Time = "11:00" },
+                new Schedule { Id = 5, Time = "12:00" },
+                new Schedule { Id = 6, Time = "16:00" },
+                new Schedule { Id = 7, Time = "17:00" },
+                new Schedule { Id = 8, Time = "18:00" },
+                new Schedule { Id = 9, Time = "19:00" },
+                new Schedule { Id = 10, Time = "20:00" }
                 );
 
             //LogBook

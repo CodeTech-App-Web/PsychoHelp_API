@@ -31,6 +31,11 @@ namespace PsychoHelp_API.Psychologists.Persistence.Repositories
             return await _context.Psychologists.FindAsync(id);
         }
 
+        public async Task<Psychologist> FindByEmailAsync(string email)
+        {
+            return await _context.Psychologists.SingleAsync(p => p.Email == email);
+        }
+
         public void Update(Psychologist psychologist)
         {
             _context.Psychologists.Update(psychologist);

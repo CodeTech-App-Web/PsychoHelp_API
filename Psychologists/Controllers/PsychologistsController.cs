@@ -21,14 +21,16 @@ namespace PsychoHelp_API.Psychologists.Controllers
     public class PsychologistsController : ControllerBase
     {
         private readonly IPsychologistService _psychologistService;
+        private readonly IScheduleService _scheduleService;
         private readonly IMapper _mapper;
         private readonly AppDbContext _context;
 
-        public PsychologistsController(IPsychologistService psychologistService, IMapper mapper, AppDbContext context)
+        public PsychologistsController(IPsychologistService psychologistService, IMapper mapper, AppDbContext context, IScheduleService scheduleService)
         {
             _psychologistService = psychologistService;
             _mapper = mapper;
             _context = context;
+            _scheduleService = scheduleService;
         }
 
         [HttpGet]
@@ -46,6 +48,16 @@ namespace PsychoHelp_API.Psychologists.Controllers
             if (psychologist == null)
                 return NotFound();
             var resource = _mapper.Map<Psychologist, PsychologistResource>(psychologist);
+            return Ok(resource);
+        }
+
+        [HttpGet("bySchedule/{id}")]
+        public async Task<IActionResult> GetIdSchedule(int id)
+        {
+            var schedule = await _scheduleService.GetByIdScheduleAsync(id);
+            if (schedule == null)
+                return NotFound();
+            var resource = _mapper.Map<Schedule, ScheduleResource>(schedule);
             return Ok(resource);
         }
 
@@ -68,12 +80,10 @@ namespace PsychoHelp_API.Psychologists.Controllers
 
         // [HttpGet("{PsychologistId}")]
         // public async Task<IEnumerable<ScheduleRepository>> GetSchedulesFromPsycho([FromRoute] int PsychologistId)
-        // {
-        //     
-        // }
-       
-        
-        
+        // {}
+
+
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SavePsychologistResource resource)
         {
@@ -115,6 +125,16 @@ namespace PsychoHelp_API.Psychologists.Controllers
             }
         
             return Ok();
+        }
+
+        [HttpGet("email/{psychologistEmail}")]
+        public async Task<IActionResult> GetByEmailAsync(string psychologistEmail)
+        {
+            var psychologist = await _psychologistService.GetByEmailAsync(psychologistEmail);
+            if (psychologist == null)
+                return NotFound();
+            var resource = _mapper.Map<Psychologist, PsychologistResource>(psychologist);
+            return Ok(resource);
         }
 
         [HttpGet("schedule/{Id}")]

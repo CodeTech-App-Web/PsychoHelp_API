@@ -23,6 +23,9 @@ namespace PsychoHelp_API.Psychologists.Persistence.Repositories
             await _context.Schedules.AddAsync(schedule);
         }
 
-        
+        public async Task<Schedule> FindByIdScheduleAsync(int id)
+        {
+            return await _context.Schedules.FindAsync(id);
+        }
     }
 }

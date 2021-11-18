@@ -39,5 +39,10 @@ namespace PsychoHelp_API.Psychologists.Services
                 return new ScheduleResponse($"An error occurred while saving Schedule: {e.Message}");
             }
         }
+
+        public Task<Schedule> GetByIdScheduleAsync(int id)
+        {
+            return _scheduleRepository.FindByIdScheduleAsync(id);
+        }
     }
 }
