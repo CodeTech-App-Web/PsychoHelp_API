@@ -20,7 +20,8 @@ namespace PsychoHelp_API.Mapping
             CreateMap<SaveLogBookResource, Logbook>();
             CreateMap<SavePublicationResource, Publication>();
             CreateMap<SaveAppointmentResource, Appointment>();
-            CreateMap<SaveTagResource, Tag>();      
+            CreateMap<SaveTagResource, Tag>();     
+            CreateMap<UpdateAppointmentResource, Appointment>();
 
         }
     }
