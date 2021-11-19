@@ -58,6 +58,13 @@ namespace PsychoHelp_API.Appointments.Persistence.Repositories
                 .ToListAsync();
         }
 
+        public async Task<IEnumerable<Appointment>> FindAppointmentsByPatientIdAsync(int id)
+        {
+            return await _context.Appointments
+                .Where(a => a.PatientId == id)
+                .ToListAsync();
+        }
+
         public async Task<IEnumerable<Appointment>> ListAsync()
         {
             return await _context.Appointments.ToListAsync();

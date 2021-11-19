@@ -98,6 +98,11 @@ namespace PsychoHelp_API.Appointments.Services
             return await _appointmentRepository.FindAppointmentsByPsychologistIdAsync(id);
         }
 
+        public async Task<IEnumerable<Appointment>> GetByPatientIdAsync(int id)
+        {
+            return await _appointmentRepository.FindAppointmentsByPatientIdAsync(id);
+        }
+
         public async Task<IEnumerable<Patient>> GetPatientsByPsychologistIdAsync(int id)
         {
             return await _appointmentRepository.FindPatientsByPsychologistIdAsync(id);

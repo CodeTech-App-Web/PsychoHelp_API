@@ -65,6 +65,15 @@ namespace PsychoHelp_API.Appointments.Controllers
             return resources;
         }
         
+        [SwaggerOperation(Summary = "Retorna appointments por Id de patient")]
+        [HttpGet("patients/{patientId}")]
+        public async Task<IEnumerable<AppointmentResource>> GetByPatientIdAsync(int patientId)
+        {
+            var appointments = await _appointmentService.GetByPatientIdAsync(patientId);
+            var resources = _mapper.Map<IEnumerable<Appointment>, IEnumerable<AppointmentResource>>(appointments);
+            return resources;
+        }
+        
         [SwaggerOperation(Summary = "Retorna todos los appointments de un psicólogo y un paciente")]
         [HttpGet("psychologist/{psychoId}/patient/{patientId}")]
         public async Task<IEnumerable<AppointmentResource>> GetAppointmentByPatientsAndPsychologistIdAsync(int psychoId, int patientId)

@@ -14,6 +14,7 @@ namespace PsychoHelp_API.Appointments.Domain.Repositories
         Task<IEnumerable<Patient>> FindPatientsByPsychologistIdAsync(int id);
         Task<IEnumerable<Appointment>> FindByPatientAndPsychologistIdAsync(int patientId, int psychologistId);
         Task<IEnumerable<Appointment>> FindAppointmentsByPsychologistIdAsync(int id);
+        Task<IEnumerable<Appointment>> FindAppointmentsByPatientIdAsync(int id);
         void Update(Appointment publication);
         void Remove(Appointment publication);
     }

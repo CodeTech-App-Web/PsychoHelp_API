@@ -16,6 +16,7 @@ namespace PsychoHelp_API.Appointments.Domain.Services
         Task<AppointmentResponse> DeleteAsync(int id);
         Task<Appointment> GetByIdAsync(int id);
         Task<IEnumerable<Appointment>> GetByPsychologistIdAsync(int id);
+        Task<IEnumerable<Appointment>> GetByPatientIdAsync(int id);
         Task<IEnumerable<Patient>> GetPatientsByPsychologistIdAsync(int id);
         Task<IEnumerable<Appointment>> GetAppointmentByPatientAndPsychologistIdAsync(int patientId, int psychologistId);
     }
