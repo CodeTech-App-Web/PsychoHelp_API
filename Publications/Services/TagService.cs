@@ -15,10 +15,11 @@ namespace PsychoHelp_API.Publications.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IPublicationRepository _publicationRepository;
 
-        public TagService(ITagRepository tagRepository, IUnitOfWork unitOfWork)
+        public TagService(ITagRepository tagRepository, IUnitOfWork unitOfWork, IPublicationRepository publicationRepository)
         {
             _tagRepository = tagRepository;
-            _unitOfWork = unitOfWork;            
+            _unitOfWork = unitOfWork;
+            _publicationRepository = publicationRepository;
         }
 
         public async Task<IEnumerable<Tag>> ListAsync()
@@ -52,7 +53,7 @@ namespace PsychoHelp_API.Publications.Services
             }
         }
 
-        public async Task<TagResponse> UpdateAsync(int id, Tag tag)
+       /* public async Task<TagResponse> UpdateAsync(int id, Tag tag)
         {
             // Validate If Tag Exists
             var existingTag = await _tagRepository.FindById(id);
@@ -79,7 +80,7 @@ namespace PsychoHelp_API.Publications.Services
                 return new TagResponse($"An error ocurred while updating the Tag: {e.Message}");
             }
             
-        }
+        }*/
 
         public async Task<TagResponse> DeleteAsync(int id)
         {

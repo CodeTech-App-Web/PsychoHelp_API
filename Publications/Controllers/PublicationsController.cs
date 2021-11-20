@@ -30,6 +30,25 @@ namespace PsychoHelp_API.Publications.Controllers
             return resources;
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetByIdAsync(int id)
+        {
+            var publication = await _publicationService.GetByIdAsync(id);
+            if (publication == null)
+                return NotFound();
+
+            var resource = _mapper.Map<Publication, PublicationResource>(publication);
+            return Ok(resource);
+        }
+
+        [HttpGet("psychologist/{psychologistId}")]
+        public async Task<IEnumerable<PublicationResource>> GetByPsychologistId(int psychologistId)
+        {
+            var publications = await _publicationService.ListByPsychologistIdAsync(psychologistId);
+            var resources = _mapper.Map<IEnumerable<Publication>, IEnumerable<PublicationResource>>(publications);
+            return resources;
+        }
+
         [HttpPost]
         public async Task<IActionResult>PostAsync([FromBody] SavePublicationResource resource)
         {

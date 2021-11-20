@@ -32,5 +32,7 @@ namespace PsychoHelp_API.Publications.Controllers
             return resources;
         }
 
+        
+
     }
 }

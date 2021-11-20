@@ -12,7 +12,7 @@ namespace PsychoHelp_API.Publications.Domain.Services
         Task<IEnumerable<Tag>> ListAsync();
         Task<IEnumerable<Tag>> ListByPublicationId(int publicationId);
         Task<TagResponse> SaveAsync(Tag tag);
-        Task<TagResponse> UpdateAsync(int id, Tag tag);
+        //Task<TagResponse> UpdateAsync(int id, Tag tag);
         Task<TagResponse> DeleteAsync(int id);
     }
 }

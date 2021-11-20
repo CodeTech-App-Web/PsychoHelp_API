@@ -9,6 +9,7 @@ namespace PsychoHelp_API.Publications.Domain.Services
     {
         Task<IEnumerable<Publication>> ListAsync();
         Task<IEnumerable<Publication>> ListByPsychologistIdAsync(int psychologistId);
+        Task<Publication> GetByIdAsync(int id);
         Task<PublicationResponse> SaveAsync(Publication publication);
         Task<PublicationResponse> UpdateAsync(int id, Publication publication);
         Task<PublicationResponse> DeleteAsync(int id);
