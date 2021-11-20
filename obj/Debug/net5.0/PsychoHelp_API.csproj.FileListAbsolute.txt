@@ -1,0 +1,156 @@
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\appsettings.json
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.exe
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.deps.json
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.runtimeconfig.json
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.runtimeconfig.dev.json
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\ref\PsychoHelp_API.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.pdb
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Humanizer.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.AssemblyReference.cache
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.AssemblyInfoInputs.cache
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.AssemblyInfo.cs
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.CoreCompileInputs.cache
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\staticwebassets\PsychoHelp_API.StaticWebAssets.Manifest.cache
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\staticwebassets\PsychoHelp_API.StaticWebAssets.xml
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\scopedcss\bundle\PsychoHelp_API.styles.css
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.RazorTargetAssemblyInfo.cache
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.CopyComplete
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\ref\PsychoHelp_API.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.pdb
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.genruntimeconfig.cache
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\appsettings.Development.json
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\appsettings.json
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.exe
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.deps.json
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.runtimeconfig.json
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.runtimeconfig.dev.json
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\ref\PsychoHelp_API.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.pdb
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\AutoMapper.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Google.Protobuf.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Humanizer.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\K4os.Compression.LZ4.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\K4os.Compression.LZ4.Streams.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\K4os.Hash.xxHash.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\MySql.Data.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Ubiety.Dns.Core.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\ZstdNet.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\GitHub Projects\PsychoHelp_API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.AssemblyReference.cache
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.AssemblyInfoInputs.cache
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.AssemblyInfo.cs
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.CoreCompileInputs.cache
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.MvcApplicationPartsAssemblyInfo.cs
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.MvcApplicationPartsAssemblyInfo.cache
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\staticwebassets\PsychoHelp_API.StaticWebAssets.Manifest.cache
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\staticwebassets\PsychoHelp_API.StaticWebAssets.xml
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\scopedcss\bundle\PsychoHelp_API.styles.css
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.RazorTargetAssemblyInfo.cache
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.CopyComplete
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.dll
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\ref\PsychoHelp_API.dll
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.pdb
+D:\GitHub Projects\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.genruntimeconfig.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\appsettings.Development.json
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\appsettings.json
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.exe
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.deps.json
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.runtimeconfig.json
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.runtimeconfig.dev.json
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\ref\PsychoHelp_API.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\PsychoHelp_API.pdb
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\AutoMapper.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Google.Protobuf.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Humanizer.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\K4os.Compression.LZ4.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\K4os.Compression.LZ4.Streams.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\K4os.Hash.xxHash.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\MySql.Data.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Ubiety.Dns.Core.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\ZstdNet.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.AssemblyReference.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.AssemblyInfoInputs.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.AssemblyInfo.cs
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.CoreCompileInputs.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.MvcApplicationPartsAssemblyInfo.cs
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.MvcApplicationPartsAssemblyInfo.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\staticwebassets\PsychoHelp_API.StaticWebAssets.Manifest.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\staticwebassets\PsychoHelp_API.StaticWebAssets.xml
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\scopedcss\bundle\PsychoHelp_API.styles.css
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.RazorTargetAssemblyInfo.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.csproj.CopyComplete
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\ref\PsychoHelp_API.dll
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.pdb
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\obj\Debug\net5.0\PsychoHelp_API.genruntimeconfig.cache
+D:\Trabajos de la U\GitHubRepositoryTrabajos\TRABAJO_FINAL_WEB\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Google.Protobuf.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\K4os.Compression.LZ4.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\K4os.Hash.xxHash.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\MySql.Data.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Ubiety.Dns.Core.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\ZstdNet.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\TARAZONA\Desktop\APP WEB\API\PsychoHelp_API\bin\Debug\net5.0\MySqlConnector.dll
