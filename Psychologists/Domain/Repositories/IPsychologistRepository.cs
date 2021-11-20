@@ -13,5 +13,6 @@ namespace PsychoHelp_API.Psychologists.Domain.Repositories
         Task<Psychologist> FindByIdAsync(int id);
         void Update(Psychologist psychologist);
         void Remove(Psychologist psychologist);
+        
     }
 }

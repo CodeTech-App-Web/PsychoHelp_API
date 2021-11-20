@@ -40,5 +40,7 @@ namespace PsychoHelp_API.Psychologists.Persistence.Repositories
         {
             _context.Psychologists.Remove(psychologist);
         }
+
+       
     }
 }
