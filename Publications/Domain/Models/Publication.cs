@@ -13,6 +13,8 @@ namespace PsychoHelp_API.Publications.Domain.Models
        // public string Tags { get; set; }
         public DateTime CreatedAt { get; set; }
 
+        public string Img { get; set; }
+
         // Relationships
 
         public int PsychologistId { get; set; }

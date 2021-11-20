@@ -150,5 +150,118 @@ namespace PsychoHelp_API.Psychologists.Controllers
                 Time = c.Time
             });
         }
+
+        [HttpGet("genre/{genre}")]
+        public async Task<IEnumerable<PsychologistResource>> GetPsychologistsByGenre(string genre)
+        {
+            var psychologists = await _psychologistService.ListAsync();
+            var psychologistByGenre = psychologists.Where(p => p.Genre == genre);
+
+            return psychologistByGenre.Select(p => new PsychologistResource
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Age = p.Age,
+                Dni = p.Dni,
+                Email = p.Email,
+                Password = p.Password,
+                Phone = p.Phone,
+                Specialization = p.Specialization,
+                Formation = p.Formation,
+                About = p.About,
+                Active = p.Active,
+                New = p.New,             
+                Img = p.Img,
+                Cmp = p.Cmp,
+                Genre = p.Genre,
+                SessionType = p.SessionType
+            });
+        }
+
+        [HttpGet("sessionType/{sessionType}")]
+        public async Task<IEnumerable<PsychologistResource>> GetPsychologistsBySessionType(string sessionType)
+        {
+            var psychologists = await _psychologistService.ListAsync();
+            var psychologistBySessionType = psychologists.Where(p => p.SessionType == sessionType);
+
+            return psychologistBySessionType.Select(p => new PsychologistResource
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Age = p.Age,
+                Dni = p.Dni,
+                Email = p.Email,
+                Password = p.Password,
+                Phone = p.Phone,
+                Specialization = p.Specialization,
+                Formation = p.Formation,
+                About = p.About,
+                Active = p.Active,
+                New = p.New,
+                Img = p.Img,
+                Cmp = p.Cmp,
+                Genre = p.Genre,
+                SessionType = p.SessionType
+            });
+        }
+
+        [HttpGet("genre/{genre}&sessionType/{sessionType}")]
+        public async Task<IEnumerable<PsychologistResource>> GetPsychologistByGenreAndSessionType(string genre, string sessionType)
+        {
+            var psychologists = await _psychologistService.ListAsync();
+            var psychologistByGenreAndSessionType = psychologists.Where(p => p.SessionType == sessionType && p.Genre == genre);
+
+            return psychologistByGenreAndSessionType.Select(p => new PsychologistResource
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Age = p.Age,
+                Dni = p.Dni,
+                Email = p.Email,
+                Password = p.Password,
+                Phone = p.Phone,
+                Specialization = p.Specialization,
+                Formation = p.Formation,
+                About = p.About,
+                Active = p.Active,
+                New = p.New,
+                Img = p.Img,
+                Cmp = p.Cmp,
+                Genre = p.Genre,
+                SessionType = p.SessionType
+            });  
+
+        }
+
+        [HttpGet("name/{name}")]
+        public async Task<IEnumerable<PsychologistResource>> GetPsychologistByName(string name)
+        {
+            // var psychologistsList = await _psychologistService.ListAsync();
+            // var psychologistByName = psychologistsList.Where(p => p.Name.Contains(name));
+            // Console.WriteLine(psychologistsList);
+            //var psychologistByName = _context.Psychologists.;
+           //if (name != "")
+             var  psychologistByName = _context.Psychologists.Where(p => p.Name.Contains(name));
+
+            return psychologistByName.Select(p => new PsychologistResource
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Age = p.Age,
+                Dni = p.Dni,
+                Email = p.Email,
+                Password = p.Password,
+                Phone = p.Phone,
+                Specialization = p.Specialization,
+                Formation = p.Formation,
+                About = p.About,
+                Active = p.Active,
+                New = p.New,
+                Img = p.Img,
+                Cmp = p.Cmp,
+                Genre = p.Genre,
+                SessionType = p.SessionType
+            });
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace PsychoHelp_API.Publications.Resources
     public class SaveTagResource
     { 
         [Required]
-        public string Title { get; set; }
+        public string Text { get; set; }
         
         [Required]
         public int PublicationId { get; set; }

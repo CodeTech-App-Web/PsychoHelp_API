@@ -14,5 +14,6 @@ namespace PsychoHelp_API.Psychologists.Domain.Repositories
         Task<Psychologist> FindByEmailAsync(string email);
         void Update(Psychologist psychologist);
         void Remove(Psychologist psychologist);
+        
     }
 }

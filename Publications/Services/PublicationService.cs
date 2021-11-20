@@ -16,10 +16,11 @@ namespace PsychoHelp_API.Publications.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IPsychologistRepository _psychologistRepository;
 
-        public PublicationService(IPublicationRepository publicationRepository, IUnitOfWork unitOfWork)
+        public PublicationService(IPublicationRepository publicationRepository, IUnitOfWork unitOfWork, IPsychologistRepository psychologistRepository)
         {
             _publicationRepository = publicationRepository;
             _unitOfWork = unitOfWork;
+            _psychologistRepository = psychologistRepository;
         }
 
         public async Task<IEnumerable<Publication>> ListAsync()
@@ -61,9 +62,9 @@ namespace PsychoHelp_API.Publications.Services
                 return new PublicationResponse("Invalid Psychologist");
 
             existingPublication.Title = publication.Title;
-            existingPublication.Description = publication.Description;
+            existingPublication.Description = publication.Description;            
             //existingPublication.Tags = publication.Tags;
-            existingPublication.PsychologistId = publication.PsychologistId;
+            //existingPublication.PsychologistId = publication.PsychologistId;
 
             try
             {
@@ -74,7 +75,7 @@ namespace PsychoHelp_API.Publications.Services
             }
             catch(Exception e)
             {
-                return new PublicationResponse($"An error occurred ehile updating the Publication: {e.Message}");
+                return new PublicationResponse($"An error occurred while updating the Publication: {e.Message}");
 
             }
         }
@@ -102,6 +103,11 @@ namespace PsychoHelp_API.Publications.Services
         public async Task<IEnumerable<Publication>> ListByPsychologistIdAsync(int psychologistId)
         {
             return await _publicationRepository.FindByPsychologistIdAsync(psychologistId);
+        }
+
+        public Task<Publication> GetByIdAsync(int id)
+        {
+            return _publicationRepository.FindByIdAsync(id);
         }
     } 
 }

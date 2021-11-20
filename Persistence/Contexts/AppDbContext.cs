@@ -64,15 +64,15 @@ namespace PsychoHelp_API.Persistence.Contexts
                     Name = "Juan Garcia",
                     Age = "28/04/2001",
                     Dni = 12345678, 
-                    Email = "usuarios1@hotmail.com", 
+                    Email = "juangarcia@hotmail.com", 
                     Password = "123456789", 
                     Phone = 123456789, 
-                    Specialization = "autoestima", 
-                    Formation = "UPC", 
-                    About = "qwertyuiop", 
+                    Specialization = "Esteem", 
+                    Formation = "Postgraduate course in sexual diversity and human rights - Universidad Alas Peruanas", 
+                    About = "I love my work as a therapist, I feel privileged to work on what I have studied so much for. This gives me a fresh and committed style when it comes to serving you.I highly value a sense of humor, creativity and wit when it comes to intervening.", 
                     Active = false, 
                     New = false, 
-                    Img = "sadsdasda", 
+                    Img = "https://bullseye-magazine.eu/wp-content/uploads/2019/09/portrait_test.jpg", 
                     Cmp = 987456, 
                     Genre = "Male", 
                     SessionType = "Individual"
@@ -83,18 +83,56 @@ namespace PsychoHelp_API.Persistence.Contexts
                     Name = "Ana Flores",
                     Age = "28/04/2001",
                     Dni = 12344569,                   
-                    Email = "usuarios2@hotmail.com",
-                    Password = "123456",
+                    Email = "anaflores@hotmail.com",
+                    Password = "ana123456",
                     Phone = 987456123,
-                    Specialization = "autoestima",
-                    Formation = "UPC",
-                    About = "qwertyuiop",
+                    Specialization = "Esteem",
+                    Formation = "Bachelor of Psychology - Universidad Nacional Mayor de San Marcos",
+                    About = "I am a happy and empathetic person. I enjoy meeting people from different cultures and discovering different ways of perceiving the world. I love listening to music and watching classic movies. I practice Yoga and Meditation in order to be more and more focused on the present moment.",
                     Active = false,
                     New = false,
-                    Img = "sadsdasda",
+                    Img = "https://www.enseignemoi-files.com/site/view/images/dyn-cache/pages/image/img/12/20/1427215436_122008_1200x667x0.jpg?v=2018021301",
+                    Cmp = 123456,
+                    Genre = "Female",
+                    SessionType = "Individual"
+                },
+                new Psychologist
+                {
+                    Id = 3,
+                    Name = "Juan Perez",
+                    Age = "17/04/1996",
+                    Dni = 72058669,
+                    Email = "juanperez@hotmail.com",
+                    Password = "juan1234",
+                    Phone = 987489966,
+                    Specialization = "Depression",
+                    Formation = "Bachelor of Psychology - Technological University of Peru",
+                    About = "I am a person who enjoys the therapeutic space. I constantly seek to update myself, preserving the essence of psychotherapy, thus generating a warm relationship of respect and empathy, with a vision of growth for my patients.",
+                    Active = false,
+                    New = false,
+                    Img = "https://www.magisnet.com/wp-content/uploads/2021/04/Tal-BenShahar.jpg",
                     Cmp = 123456,
                     Genre = "Male",
-                    SessionType = "Individual"
+                    SessionType = "Couple"
+                },
+                new Psychologist
+                {
+                    Id = 4,
+                    Name = "Silvia Muñoz",
+                    Age = "18/11/1985",
+                    Dni = 12344569,
+                    Email = "silvia.m@hotmail.com",
+                    Password = "sil123456",
+                    Phone = 987456123,
+                    Specialization = "Codependency",
+                    Formation = "Bachelor of Psychology - Universidad Nacional Mayor de San Marcos",
+                    About = "Passionate about the social and human sciences that seek to understand the complexity of the human being, especially psychology and its various expressions. Lover of nature, plants, animals and my family. Any outdoor plan is always a good plan.",
+                    Active = false,
+                    New = false,
+                    Img = "https://img.freepik.com/foto-gratis/mujer-hermosa-joven-mirando-camara-chica-moda-verano-casual-camiseta-blanca-pantalones-cortos-hembra-positiva-muestra-emociones-faciales-modelo-divertido-aislado-amarillo_158538-15796.jpg?size=626&ext=jpg",
+                    Cmp = 123456,
+                    Genre = "Female",
+                    SessionType = "Couple"
                 }
                 );
 
@@ -165,8 +203,9 @@ namespace PsychoHelp_API.Persistence.Contexts
             builder.Entity<Publication>().HasKey(p => p.Id);
             builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Publication>().Property(p => p.Title).IsRequired().HasMaxLength(100);
-            builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(1000);            
+            builder.Entity<Publication>().Property(p => p.Description).IsRequired();         
             builder.Entity<Publication>().Property(p => p.CreatedAt).HasColumnType("DateTime");
+            builder.Entity<Publication>().Property(p => p.Img);
 
             //Relationships
             builder.Entity<Publication>().HasMany(p => p.Tags)
@@ -176,9 +215,35 @@ namespace PsychoHelp_API.Persistence.Contexts
             //Sample Data
             builder.Entity<Publication>().HasData
             (
-                new Publication { Id = 1, Title = "Prueba 1", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 1 },
-                new Publication { Id = 2, Title = "Prueba 2", Description = "Descripcion de Prueba", CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"), PsychologistId = 2 }
+                new Publication
+                {
+                    Id = 1,
+                    Title = "How to beat anxiety?",
+                    Description = "Anxiety is a mental problem that affects the health of many people. Anxiety is a feeling of fear, fear, and restlessness. It can make you sweat, feel restless and tense, and have palpitations. It can be a normal reaction to stress. For example, you may feel anxious when faced with a difficult problem at work, before taking an exam, or before making an important decision.",
+                    CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"),
+                    Img = "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/article/5e6b7bc55bafe86b2ccdb361/ansiedad-corona_0.jpg",
+                    PsychologistId = 1
+                },
+                new Publication
+                {
+                    Id = 2,
+                    Title = "How to help a person with depression?",
+                    Description = "Depression is one of the most difficult mental problems to treat. That is why in this chapter we will teach you how to support a person who has symptoms of depression.",
+                    CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"),
+                    Img = "https://assets.weforum.org/article/image/responsive_large_E79PmG1Oop_9P7-edBkH9JddpXUpnaVEz2cvg8KkYOE.jpg",
+                    PsychologistId = 2
+                },
+                new Publication
+                {
+                    Id = 3,
+                    Title = "Learning about negative emotions",
+                    Description = "We can all recognize those emotions that we like, pleasant emotions. Who doesn't like to feel happy, excited, in love, etc. But on the other hand, we also recognize emotions that can be more uncomfortable, for example, sadness, shame, guilt and anger.",
+                    CreatedAt = DateTime.Parse("2021-11-01T03:49:49.450Z"),
+                    Img = "https://gentequebrilla.azurewebsites.net/wp-content/uploads/2019/04/12014-1024x604.jpg",
+                    PsychologistId = 2
+                }
             );
+            
 
             //Tag
 
@@ -191,9 +256,12 @@ namespace PsychoHelp_API.Persistence.Contexts
             //Sample Data
             builder.Entity<Tag>().HasData
             (
-            new Tag { Id = 1, Text = "Tag Prueba 1", PublicationId = 1 },
-            new Tag { Id = 2, Text = "Tag Prueba 2", PublicationId = 1 },
-            new Tag { Id = 3, Text = "Tag Prueba 3", PublicationId = 2 }
+            new Tag { Id = 1, Text = "#anxiety", PublicationId = 1 },
+            new Tag { Id = 2, Text = "#fear", PublicationId = 1 },
+            new Tag { Id = 3, Text = "#depression", PublicationId = 2 },
+            new Tag { Id = 4, Text = "#sadness", PublicationId = 2},
+            new Tag { Id = 5, Text = "#emotions", PublicationId = 3 },
+            new Tag { Id = 6, Text = "#negativity", PublicationId = 3 }
             );
 
             //Appointment 

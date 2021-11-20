@@ -107,5 +107,6 @@ namespace PsychoHelp_API.Psychologists.Services
         {
             return _psychologistRepository.FindByEmailAsync(email);
         }
+
     }
 }

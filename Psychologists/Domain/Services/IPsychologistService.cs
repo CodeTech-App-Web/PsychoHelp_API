@@ -18,5 +18,6 @@ namespace PsychoHelp_API.Psychologists.Domain.Services
         Task<Psychologist> GetByIdAsync(int id);
         Task<Psychologist> GetByEmailAsync(string email);
 
+
     }
 }
