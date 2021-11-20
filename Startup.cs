@@ -46,36 +46,36 @@ namespace PsychoHelp_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            
+
+
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options =>
-            { 
+            {
                 options.UseMySQL(
                     Configuration.GetConnectionString("ConnectionPsychoHelp"));
                 // options.UseInMemoryDatabase("psychohelp-api-in-memory");
             });
-            services.AddScoped<IPsychologistRepository, PsychologistRepository >();
+            services.AddScoped<IPsychologistRepository, PsychologistRepository>();
             services.AddScoped<IPsychologistService, PsychologistService>();
 
             services.AddScoped<IScheduleRepository, ScheduleRepository>();
             services.AddScoped<IScheduleService, ScheduleService>();
-            
+
             services.AddScoped<ILogBookRepository, LogBookRepository>();
             services.AddScoped<ILogBookService, LogbookService>();
-            
+
             services.AddScoped<IPatientRepository, PatientRepository>();
             services.AddScoped<IPatientService, PatientService>();
-            
+
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IPublicationService, PublicationService>();
 
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<IAppointmentService, AppointmentService>();
-            
+
             services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<ITagService, TagService>();
-                       
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddCors(options =>
@@ -92,12 +92,13 @@ namespace PsychoHelp_API
             {
                 c.EnableAnnotations();
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PsychoHelp_API", Version = "v1" });
+
             });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.IsDevelopment() || env.IsProduction())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();

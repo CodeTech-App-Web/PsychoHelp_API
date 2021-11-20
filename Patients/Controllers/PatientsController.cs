@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using PsychoHelp_API.patients.Domain.Models;
 using PsychoHelp_API.patients.Domain.Services;
 using PsychoHelp_API.Extensions;
-using PsychoHelp_API.patients.Domain.Repositories;
 using PsychoHelp_API.patients.Resources;
 using PsychoHelp_API.Persistence.Contexts;
 
