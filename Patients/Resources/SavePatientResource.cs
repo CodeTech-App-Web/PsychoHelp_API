@@ -27,8 +27,7 @@ namespace PsychoHelp_API.patients.Resources
         public DateTime Date { get; set; }
         [Required]
         public string Gender { get; set; }
-        [Required]
-        [MaxLength(20)]
+        [Required]        
         public string Img { get; set; }
     }
 }
